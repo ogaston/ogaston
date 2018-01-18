@@ -1,0 +1,377 @@
+@charset "UTF-8";
+
+// Colors
+@import "components/color";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// components
+@import "components/global";
+@import "components/badges";
+@import "components/icons-material-design";
+@import "components/grid";
+@import "components/navbar";
+@import "components/roboto";
+@import "components/typography";
+@import "components/transitions";
+@import "components/cards";
+@import "components/toast";
+@import "components/tabs";
+@import "components/tooltip";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/waves";
+@import "components/modal";
+@import "components/collapsible";
+@import "components/chips";
+@import "components/materialbox";
+@import "components/forms/forms";
+@import "components/table_of_contents";
+@import "components/sideNav";
+@import "components/preloader";
+@import "components/slider";
+@import "components/carousel";
+@import "components/tapTarget";
+@import "components/pulse";
+@import "components/date_picker/default";
+@import "components/date_picker/default.date";
+@import "components/date_picker/default.time";
+
+
+$fontsColor:#363d43;
+$lightFontColor:#9b9b9b;
+
+$mainColor:#c6e5ea;
+$mainColorLighter:#e4fafd;
+$mainColorLight:#d8edf0;
+$mainColorDark:#52869e;
+
+@font-face{
+	font-family: "Coolvetica";
+	src:url('coolvetica.ttf');
+}
+
+body{
+	font-family: "Comfortaa";
+	color: $fontsColor;
+}
+
+nav{
+	ul li a {
+		color:$fontsColor;
+		text-transform: uppercase;
+		margin:0px 10px; 
+	}
+}
+
+.sec-header{
+
+	max-height: 450px;
+    overflow: hidden;
+	background-color: $mainColor;
+
+	.triangle {
+		width: 0;
+		height: 0;
+	    border-top: 450px solid transparent;
+	    border-right: 1350px solid $mainColorLight;
+	    border-bottom: 0px solid $mainColorLight;
+	    position: relative;
+    	right: -10px;
+    	float: right;
+	}
+
+	.triangle-upper {
+		width: 0;
+		height: 0;
+	    border-top: 200px solid transparent;
+	    border-right: 1320px solid $mainColorLighter;
+	    border-bottom: 50px solid $mainColorLighter;
+	    position: relative;
+	    top: -200px;
+    	right: -10px;
+    	float: right;
+	}
+
+	.devImg{
+		    position: relative;
+		    top: -650px;
+		    width: 440px;
+	}
+	
+	.container{
+		position: relative;
+    	z-index: +2;
+	}
+
+	.title{
+		font-family:"Coolvetica";
+		font-size: 43px
+	}
+	.sub-title{
+		color: $lightFontColor;
+		font-size: 20px;
+		margin-top:0px;
+
+		i{
+			color: #32cdf9;
+			margin-left: 5px; 
+		}
+	}
+	.text-presentation{
+		p{
+			margin:0px auto;
+			font-family:"Coolvetica";
+			font-size: 17px; 
+		}
+	}
+}
+
+.textCenter{
+	text-align: center;
+}
+
+.sec-conoceme{
+	background-color: $mainColorLighter;
+	min-height: 500px;
+	padding: 55px 0px;
+
+	.row{
+		margin-bottom: 0px;
+	}
+
+	.text-description{
+		margin: 20px auto;
+		p{
+			font-family: "Coolvetica";
+			margin: 0px auto;
+			font-size: 17px;
+		}
+	}
+
+	.text-advise{
+		margin: 20px auto;
+
+		p{
+			font-family: "Coolvetica";
+			margin: 0px auto;
+		}
+	}
+
+	.text-quotes{
+		margin: 20px auto;
+
+		p{
+			font-size: 20px;
+			color: $lightFontColor;
+		}
+	}
+
+	.circle{
+		     width: 250px;
+		     height: 250px;
+		     -moz-border-radius: 50%;
+		     -webkit-border-radius: 50%;
+		     border-radius: 50%;
+		     background: $fontsColor;
+		     margin: 0px auto;
+	}
+}
+
+.sec-aptitudes{
+	background-color: $mainColor;
+	min-height: 450px;
+	padding: 80px 0px 180px 0px;
+
+	.title-lined{
+		font-family: "Coolvetica";
+	    text-decoration: underline;
+    	text-decoration-color: white;
+    	margin-top: 0px;
+       	margin: 0px 0px 85px 85px;
+	}
+
+	.block-group{
+
+		text-align: center;
+		
+		.title{
+			font-family: "Coolvetica";
+			font-size: 35px;
+		}
+
+		p{
+			color: white;
+			font-size: 14px;
+		    width: 250px;
+    		margin: auto;
+		}
+
+		.b1{
+		    height: 180px;
+    		background: #61b3cf;
+    		border: solid 2px #c6e5ea;
+		}
+		.b2{
+			height: 120px;
+    		background: #9ebefd;
+    		border: solid 2px #c6e5ea;
+    		h3{
+    			margin-bottom: 3px;
+    		}
+		}
+		.b3{
+		    height: 240px;
+		    background: #52869e;
+		    float: right;
+		    padding: 50px;
+		    border: solid 2px #c6e5ea;
+		}
+		.b4{
+		  	background: #4ca0e8;
+    		height: 300px;
+	    	position: relative;
+    	    padding: 50px;
+    	    border: solid 2px #c6e5ea;
+		}
+		.b5{
+		    background: #38cafb;
+		    height: 180px;
+		    border: solid 2px #c6e5ea;
+		    p{
+		    	width: 120px
+		    }
+		}
+		.b6{
+			height: 120px;
+    		background: #a0c9d6;
+    		border: solid 2px #c6e5ea;
+    		h3{
+    			margin-bottom: 3px;
+    		}
+    		 p{
+		    	width: 100%;
+		    }	
+		}
+	}
+}
+
+
+.sec-proyectos{
+	background-color: white;
+	min-height: 450px;
+
+	.title-lined{
+		font-family: "Coolvetica";
+	    text-decoration: underline;
+    	text-decoration-color: $mainColor;
+    	margin-top: 0px;
+    	margin: 0px 0px 85px 85px;
+	}
+
+	.border-top-proyectos{
+		margin: 0px;
+	    background: #ffffff;
+	    height: 50px;
+	    border-top-left-radius: 500px;
+	    border-top-right-radius: 500px;
+	    position: relative;
+	    top: -50px;
+	}
+
+	.border-bottom-proyectos{
+		margin: 0px;
+	    background: #ffffff;
+	    height: 50px;
+	    border-bottom-left-radius: 500px;
+	    border-bottom-right-radius: 500px;
+	    position: relative;
+	    bottom:-50px;
+	}
+
+	.card-content{
+		background-color: $mainColorLight;
+	}
+
+	.card-action{
+		background-color: $mainColor;
+		i{
+			margin-left: 5px;
+		}
+	}
+}
+
+.sec-detalle{
+	background-color: $mainColorLight;
+	height: 300px;
+	padding: 70px 0px;
+
+	h2{
+		font-family: "Coolvetica";
+	}	
+
+	p{
+		font-size: 21px;
+	}
+
+	.svgHumanWork{
+	    width: 200px;
+	    top: -45px;
+	    position: relative;
+	    margin: 0px auto;
+	    display: block;
+	}
+}
+
+.sec-contacto{
+	background-color:$mainColorLighter;
+	padding: 55px 0px 0px;
+
+	.title-lined{
+		font-family: "Coolvetica";
+	    text-decoration: underline;
+    	text-decoration-color: white;
+    	margin-top: 0px;
+    	margin: 0px 0px 10px 85px;
+	}
+
+	.sub-title{
+		margin: 0px 0px 35px 85px; 
+	}
+	.contactCard{
+		background-color: $mainColorDark;
+	    height: 350px;
+	    width: 80%;
+	    padding: 30px;
+		li {
+		    margin: 20px 0px;
+		    font-family: "Coolvetica";
+		    font-size: 25px;
+		    i{
+		    	margin-right: 5px;
+		    	color: white;
+		    }
+		}
+	}
+
+	.btn-send{
+		width: 100%;
+		background-color: $mainColorDark;
+		height: 50px;
+	}
+
+	.thanks{
+		 font-family: "Coolvetica";
+		 text-transform: uppercase;
+	}
+
+	.end{
+		height: 250px;
+    	overflow: hidden;
+		margin-bottom:0px;
+	}	
+}
