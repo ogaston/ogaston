@@ -1,0 +1,136 @@
+	.sec-contacto .contactCard li{
+		font-size: 22px; 
+	}
+
+	a {
+		color: black;
+	}
+
+	.soon-label{
+		padding: 2px 10px;
+	    background: #9ebefd;
+	    color: #054df5;
+	    top: -31px;
+	    position: relative;
+	    right: -50%;
+	}
+
+	.card-title{
+	   	padding: 10px 20px !important;
+	    background: #363d43;
+	    font-family: "Coolvetica"
+	}
+
+	.label{
+		    padding: 5px;
+		    margin: 5px;
+		    display: inline-block;
+		    color: white;
+	}
+
+	.card{
+
+		transition: 0.80s;
+	}
+
+	.card:hover{
+
+		transform: translateY(-20px);
+	}
+
+@media screen and (max-width: 480px) {
+	.sec-detalle{
+		height: auto;
+	}
+
+	.sec-contacto .contactCard{
+		width: 100%;
+	}
+
+	.sec-contacto .contactCard li{
+		font-size: 20px; 
+	}
+
+	.sec-contacto .sub-title{
+		margin: 15px; 
+		font-size: 18px;
+		text-align: center;
+	}
+}
+
+
+.svgHi{
+	position: relative;
+	top:120px;
+	animation-duration: 5s;
+	animation-name: hiAppear;
+	animation-iteration-count: infinite;
+
+}
+
+
+.title, .text-presentation,.title-lined{
+	animation-duration: 1.6s;
+	animation-name: nameAppear;
+	position: relative;
+}
+
+.sub-title i {
+	position: relative;
+    animation-duration: 2.3s;
+	animation-name: twitterAppear;
+}
+
+@keyframes nameAppear {
+  from {
+   opacity: 0;
+   right: -15px
+  }
+
+  to {
+  	opacity: 1;
+   	right: 0px
+  }
+}
+
+@keyframes twitterAppear {
+0%{
+	right: 55%;
+    top: -20px;
+}
+
+25%{
+	right: 35%;
+	top:-15px;
+}
+
+50%{
+	right: 25%;
+	top:-10px;
+}
+
+75%{
+	right: 15%;
+	top:5px;
+}
+
+100%{
+	right:0px;
+	top:0px;
+}
+
+}
+
+@keyframes hiAppear{
+	0%{
+		top:250px;
+	}
+
+	50%{
+		top:120px;
+	}
+
+	100%{
+		top:250px;
+	}
+}
