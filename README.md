@@ -1,2 +1,3 @@
-# Ogaston
-This is my personal web site, created just with sass and HTML5 all was did by me
+# Ogaston - Pesonal Webpage
+
+This is my personal web site, created using HTML5, SASS and some CSS3 animations
