@@ -1,0 +1,23 @@
+nav {
+    background: #c6e5ea;
+}
+
+.sec-header .text-presentation p {
+    font-size: 2em;
+}
+
+.sec-header .title {
+    font-size: 3.6em;
+}
+
+.sec-conoceme .text-description p {
+    font-size: 1.6em;
+}
+
+.sec-conoceme .text-advise p {
+    font-size: 1.2em;
+}
+
+.sec-conoceme .text-quotes p {
+    font-size: 1.4em;
+}

@@ -1,7 +1,7 @@
 {
-  "name": "omarpage",
-  "version": "0.0.1",
-  "description": "my personal page",
+  "name": "ogaston-page",
+  "version": "1.0.0",
+  "description": "Personal web site, portfolio and more about me",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,9 @@
   "keywords": [
     "omar",
     "page",
-    "personal"
+    "personal",
+    "portfolio",
+    "developer"
   ],
   "author": "Omar Gaston",
   "license": "ISC",
