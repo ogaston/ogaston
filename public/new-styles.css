@@ -21,3 +21,7 @@ nav {
 .sec-conoceme .text-quotes p {
     font-size: 1.4em;
 }
+
+.label {
+    border-radius: 2vh;
+}
