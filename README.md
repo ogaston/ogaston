@@ -2,4 +2,4 @@
 
 This is my personal web site, created using HTML5, SASS and some CSS3 animations
 
-## [New personal page here](ogaston.com)
+## [New personal page here](https://ogaston.com/)
