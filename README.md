@@ -3,6 +3,8 @@
 **Senior Software Engineer | Cloud & Web Specialist | AI Enthusiat**  
 
 💻 Working Remotely from LATAM | 🌐 [ogaston.com](https://ogaston.com)
+> Founder of **[Chalas Creations](https://github.com/chalas-creations/)** – building creative digital solutions.
+
 
 ## 🧑🏾 About Me
 
