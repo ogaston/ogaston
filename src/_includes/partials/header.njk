@@ -1,0 +1,16 @@
+<header class="relative z-10">
+  <div class="mx-auto max-w-7xl px-6 py-6">
+    <nav class="flex items-center justify-between rounded-2xl bg-white/70 backdrop-blur px-5 py-4 shadow-soft">
+      <a href="{{ '/' | url }}" class="flex items-center gap-2">
+        {% include 'partials/logo.njk' %}
+        <span class="font-extrabold tracking-tight text-slate-900">{{ site.name }}</span>
+      </a>
+      <div class="hidden items-center gap-6 md:flex">
+        <a href="{{ '/#about' | url }}" class="text-slate-700 hover:text-brand.dark font-medium">About</a>
+        <a href="{{ '/#projects' | url }}" class="text-slate-700 hover:text-brand.dark font-medium">Projects</a>
+        <a href="{{ '/blog' | url }}" class="text-slate-700 hover:text-brand.dark font-medium">Blog</a>
+        <a href="{{ '/#contact' | url }}" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-white font-semibold shadow-soft hover:opacity-95 bg-sky-600">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>

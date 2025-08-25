@@ -1,0 +1,15 @@
+<footer class="border-t border-slate-200 bg-white/70 mt-16">
+  <div class="mx-auto max-w-7xl px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-sm text-slate-600">
+      © <span id="year"></span> · Built with ❤ by
+      <a class="font-semibold text-brand.dark hover:underline"
+         href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noreferrer">@{{ site.twitter }}</a>
+    </p>
+    <div class="flex items-center gap-4 text-sm text-slate-600">
+      <a href="{{ '/#about'   | url }}" class="hover:text-brand.dark">About</a>
+      <a href="{{ '/#projects'| url }}" class="hover:text-brand.dark">Projects</a>
+      <a href="{{ '/blog'          | url }}" class="hover:text-brand.dark">Blog</a>
+      <a href="{{ '/#contact' | url }}" class="hover:text-brand.dark">Contact</a>
+    </div>
+  </div>
+</footer>

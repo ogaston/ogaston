@@ -4,8 +4,8 @@
   "description": "Senior Software Engineer | Cloud & Web Specialist | AI Enthusiat",
   "main": "index.js",
   "scripts": {
-    "tw:dev": "tailwindcss -i ./src/assets/css/site.css -o ./dist/assets/css/site.css --watch",
-    "tw:build": "tailwindcss -i ./src/assets/css/site.css -o ./dist/assets/css/site.css --minify",
+    "tw:dev": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/site.css --watch",
+    "tw:build": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/site.css --minify",
     "dev": "run-p tw:dev dev:11ty",
     "dev:11ty": "eleventy --serve --quiet",
     "build": "eleventy && npm run tw:build",

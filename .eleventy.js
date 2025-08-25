@@ -14,6 +14,9 @@ module.exports = function (eleventyConfig) {
         Math.max(1, Math.round(readingTime(content).minutes)) + " min read"
     );
     eleventyConfig.addFilter("head", (arr, n) => arr.slice(0, n));
+    eleventyConfig.addFilter("truncate", (str, length = 100) =>
+        str.length > length ? str.substring(0, length) + "…" : str
+    );
 
     // Collections
     eleventyConfig.addCollection("posts", (collection) =>

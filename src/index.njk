@@ -1,737 +1,581 @@
 ---
-title: Omar Gastón · Full-Stack Engineer
+layout: layouts/base.njk
+title: Omar Gastón Chalas · Full-Stack Engineer
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Omar Gastón Chalas · Full‑Stack Engineer</title>
-    <link rel="stylesheet" href="/assets/css/site.css">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
-          Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      }
-    </style>
-  </head>
-  <body class="bg-white text-slate-800">
-    <!-- NAVBAR -->
-    <header class="relative z-10">
-      <div class="mx-auto max-w-7xl px-6 py-6">
-        <nav
-          class="flex items-center justify-between rounded-2xl bg-white/70 backdrop-blur px-5 py-4 shadow-soft"
+<!-- HERO -->
+<main id="home" class="relative">
+  <section class="mx-auto max-w-7xl px-6 pt-10 pb-20">
+    <div class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p
+          class="text-sm uppercase tracking-wider text-brand.dark/90 font-semibold"
         >
-          <a href="#home" class="flex items-center gap-1">
-            <!-- Brand mark (uses new primary blue) -->
-            <svg class="fill-current h-8 md:w-8 xs:w-12 mr-1" viewBox="0 0 540.77 243.63"><defs><style>.scls-1{fill:#00bcd4;}.scls-2{fill:#fff;}.scls-3{fill:#3f768c;}</style></defs><title>Asset 6</title><g id="Layer_02" data-name="Layer 2"><g id="Layer_11" data-name="Layer 11"><path class="scls-1" d="M165,128.32c-.1-17.79,1.84-35.29,8-52.08,11.73-32,34.69-51.08,67.85-57.72,22.75-4.55,45.59-4.21,67.89,2.69,30.77,9.51,49.67,30.84,58.84,61.21,6,20,6.86,40.61,5.45,61.33-.95,14-3.59,27.63-8.94,40.63-12.28,29.89-34.56,47.92-66,54.32-22.74,4.63-45.58,4.29-67.87-2.65-30.16-9.38-49.15-30.11-58.66-59.87C166.6,160.62,164.92,144.59,165,128.32Z"></path><path class="scls-2" d="M324.84,129.12c-.24,13.39-1.33,27.23-6.29,40.48-7.77,20.71-23.77,32.14-45.95,32.74-11.78.32-23.16-1.25-33.31-7.79-11-7.11-17.48-17.66-20.8-30-6.61-24.54-6.83-49.26.48-73.66,5.87-19.59,18.59-32.59,39.47-35.71,16.84-2.52,33-.8,46.51,11.07,9.42,8.28,13.95,19.34,16.73,31.24C324.06,107.7,324.75,118.09,324.84,129.12Z"></path><polygon class="scls-3" points="31.86 87.46 24.12 129.91 144.31 243.28 152.05 200.83 31.86 87.46"></polygon><polygon class="scls-3" points="24.56 93.23 30.92 136.85 154.41 43.62 148.05 0 24.56 93.23"></polygon><polygon class="scls-3" points="24.12 129.91 0 109.31 30.68 88.72 34.77 97.74 24.12 129.91"></polygon><polygon class="scls-3" points="508.91 87.8 516.65 130.25 396.46 243.63 388.72 201.18 508.91 87.8"></polygon><polygon class="scls-3" points="516.21 93.58 509.85 137.19 386.36 43.96 392.72 0.34 516.21 93.58"></polygon><polygon class="scls-3" points="516.65 130.25 540.77 109.65 510.09 89.07 506 98.08 516.65 130.25"></polygon></g></g></svg>
-            <span class="font-extrabold tracking-tight text-slate-900"
-              >ogaston.com</span
-            >
-          </a>
-
-          <div class="hidden items-center gap-6 md:flex">
-            <a
-              href="#about"
-              class="text-slate-700 hover:text-brand.dark font-medium"
-              >About</a
-            >
-            <a
-              href="#projects"
-              class="text-slate-700 hover:text-brand.dark font-medium"
-              >Projects</a
-            >
-            <a
-              href="#blog"
-              class="text-slate-700 hover:text-brand.dark font-medium"
-              >Blog</a
-            >
-            <a
-              href="#contact"
-              class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-white font-semibold shadow-soft hover:opacity-95 transition"
-              >Contact</a
-            >
-          </div>
-
-          <button
-            class="md:hidden rounded-xl border border-slate-200 p-2"
-            aria-label="Open menu"
-            id="menuBtn"
+          Hey, I’m
+        </p>
+        <h1
+          class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl"
+        >
+          Omar Gastón Chalas
+        </h1>
+        <p class="mt-4 text-lg text-slate-700">
+          Software Engineer. I build useful products and
+          lovable developer experiences across <span class="font-semibold">Cloud Platforms</span> and <span class="font-semibold">AI</span>.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a
+            href="/blog"
+            class="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-white font-semibold shadow-soft hover:opacity-95 bg-sky-600"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              class="h-6 w-6 fill-slate-700"
+              class="h-5 w-5 fill-white"
             >
-              <path d="M4 6h16M4 12h16M4 18h16" />
+              <path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z" />
             </svg>
-          </button>
-        </nav>
-
-        <!-- Mobile sheet -->
-        <div
-          id="mobileMenu"
-          class="hidden mt-3 rounded-2xl bg-white px-5 py-4 shadow-soft md:hidden"
-        >
-          <a href="#about" class="block py-2">About</a>
-          <a href="#projects" class="block py-2">Projects</a>
-          <a href="#blog" class="block py-2">Blog</a>
-          <a
-            href="#contact"
-            class="mt-2 block rounded-xl bg-slate-900 px-5 py-3 text-center text-white font-semibold shadow-soft"
-            >Contact</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <main id="home" class="relative">
-      <section class="mx-auto max-w-7xl px-6 pt-10 pb-20">
-        <div class="grid items-center gap-10 md:grid-cols-2">
-          <div>
-            <p
-              class="text-sm uppercase tracking-wider text-brand.dark/90 font-semibold"
-            >
-              Hey, I’m
-            </p>
-            <h1
-              class="mt-2 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
-            >
-              Omar Gastón Chalas
-            </h1>
-            <p class="mt-4 text-lg text-slate-700">
-              Software Engineer. I build useful products and
-              lovable developer experiences across <span class="font-semibold">Cloud Platforms</span> and <span class="font-semibold">AI</span>.
-            </p>
-            <div class="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href="#blog"
-                class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-white font-semibold shadow-soft hover:opacity-95"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="h-5 w-5 fill-white"
-                >
-                  <path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z" />
-                </svg>
-                Read the blog
-              </a>
-              <a
-                href="#projects"
-                class="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:border-brand.light"
-              >
-                View projects
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="h-5 w-5 fill-brand.dark"
-                >
-                  <path
-                    d="M5 12h12l-4-4 1.4-1.4L21.8 12l-7.4 5.4L13 16l4-4H5z"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <div class="mt-6 flex items-center gap-5 text-sm text-slate-600">
-              <a
-                href="https://twitter.com/ogastonc"
-                target="_blank"
-                class="inline-flex items-center gap-2 hover:text-brand.dark"
-                rel="noreferrer"
-              >
-                <svg
-                  class="h-5 w-5"
-                  viewBox="0 0 1200 1227"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill="#4299e1"
-                    d="M714.163 0c-75.164 31.007-123.09 107.936-113.634 187.999-84.95-4.268-163.61-45.028-218.01-110.223-24.606 42.577-21.588 95.83 7.71 135.615-65.954-2.316-127.733-34.823-166.97-87.123-20.749 48.159-8.228 104.174 31.666 137.483-58.794-8.517-113.6-33.01-158.4-71.48-4.036 52.447 22.665 102.287 67.794 130.468-51.46-2.038-99.517-17.993-141.3-45.207 0 0 0 1.23 0 1.837 0 76.262 53.642 141.724 128.137 156.477-48.98 13.357-101.756 12.009-150.279-3.793 42.64 130.442 163.018 219.046 300.033 221.301-113.555 88.149-255.752 127.438-397.543 104.193 120.69 77.275 263.723 118.38 408.385 118.38 495.683 0 786.658-414.934 768.906-786.658 54.25-39.14 101.205-88.218 138.141-143.96-50.157 22.355-103.733 37.407-158.57 44.239 57.238-34.279 101.205-88.84 121.84-153.658-53.707 31.718-113.006 54.83-174.88 66.558C870.423 44.306 796.166 4.65 714.163 0z"
-                  />
-                </svg>
-                @ogastonc
-              </a>
-                              <span class="inline-flex items-center gap-2">
-                  <svg
-                    class="h-5 w-5"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path class="text-brand.dark" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                    <circle class="text-brand.dark" cx="12" cy="10" r="3" />
-                  </svg>
-                  Remote LATAM
-                </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="mx-auto max-w-7xl px-6 pb-20">
-        <div class="grid gap-8 md:grid-cols-2">
-          <div
-            class="rounded-3xl bg-white p-7 shadow-soft ring-1 ring-slate-100"
-          >
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900">
-              Who I am
-            </h2>
-            <style>
-              .animated-link {
-                position: relative;
-                color: #4299e1;
-                font-weight: 500;
-                text-decoration: none;
-                transition: color 0.3s ease;
-              }
-              .animated-link::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: -2px;
-                left: 0;
-                background-color: #4299e1;
-                transform: scaleX(0);
-                transform-origin: bottom right;
-                transition: transform 0.3s ease;
-              }
-              .animated-link:hover::after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-              }
-              .animated-link:hover {
-                color: #2b6cb0;
-              }
-            </style>
-            <p class="mt-4 text-slate-700">
-              A passionate software engineer with 7+ years of
-              experience crafting scalable applications in fintech, education,
-              and banking. Currently pursuing a
-              <a
-                href="https://www.javeriana.edu.co/maestria-inteligencia-artificial"
-                target="_blank"
-                rel="noreferrer"
-                class="animated-link"
-                >Master's in Intelligent Systems (AI)</a
-              >
-              at Universidad Javeriana because, well, the future is exciting! 🚀
-            </p>
-            <p class="mt-3 text-slate-700">
-              I'm the founder of
-              <a
-                href="https://chalascreations.com"
-                target="_blank"
-                rel="noreferrer"
-                class="animated-link"
-                >Chalas Creations</a
-              >, where we build creative digital solutions that make an impact.
-              When I'm not coding, you'll find me exploring new tech,
-              contributing to open source, or geeking out about AI research.
-            </p>
-
-            <style>
-              .tech-icon {
-                opacity: 0.5;
-                transition: all 0.3s ease;
-              }
-              .tech-icon:hover {
-                opacity: 1;
-                transform: translateY(-2px);
-              }
-              .tooltip {
-                position: relative;
-                display: inline-block;
-              }
-              .tooltip .tooltip-text {
-                visibility: hidden;
-                background-color: #1a202c;
-                color: white;
-                text-align: center;
-                padding: 4px 8px;
-                border-radius: 6px;
-                position: absolute;
-                z-index: 1;
-                bottom: 125%;
-                left: 50%;
-                transform: translateX(-50%);
-                opacity: 0;
-                transition: opacity 0.2s;
-                font-size: 0.875rem;
-                white-space: nowrap;
-                font-weight: 500;
-              }
-              .tooltip:hover .tooltip-text {
-                visibility: visible;
-                opacity: 1;
-              }
-            </style>
-            <h4
-              class="mt-8 text-sm font-semibold text-slate-500 uppercase tracking-wider"
-            >
-              Tech I Love Working With
-            </h4>
-            <div
-              class="mt-3 grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6"
-            >
-              <div class="tooltip">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React"
-                  class="tech-icon w-10 h-10"
-                />
-                <span class="tooltip-text">React</span>
-              </div>
-              <div class="tooltip">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                  alt="Node.js"
-                  class="tech-icon w-10 h-10"
-                />
-                <span class="tooltip-text">Node.js</span>
-              </div>
-              <div class="tooltip">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  alt="Python"
-                  class="tech-icon w-10 h-10"
-                />
-                <span class="tooltip-text">Python</span>
-              </div>
-              <div class="tooltip">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
-                  alt="AWS"
-                  class="tech-icon w-10 h-10"
-                />
-                <span class="tooltip-text">AWS</span>
-              </div>
-
-              <div class="tooltip">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
-                  alt="scikit-learn"
-                  class="tech-icon w-10 h-10"
-                />
-                <span class="tooltip-text">scikit-learn</span>
-              </div>
-              <div class="tooltip">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL"
-                  class="tech-icon w-10 h-10"
-                />
-                <span class="tooltip-text">PostgreSQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="rounded-3xl bg-gradient-to-br from-brand.light/5 to-brand.dark/5 p-7"
-          >
-            <h3 class="text-xl font-bold text-slate-900">Quick facts</h3>
-            <div class="mt-4 grid gap-4 sm:grid-cols-2">
-              <!-- Innovation Award -->
-              <div
-                class="group rounded-2xl bg-gradient-to-br from-yellow-50 to-amber-50 p-5 shadow-soft transition hover:-translate-y-0.5"
-              >
-                <div
-                  class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-100"
-                >
-                  <span class="text-xl">🏆</span>
-                </div>
-                <h4 class="font-semibold text-slate-900">Innovation Star</h4>
-                <p class="mt-1 text-sm text-slate-700">
-                  Proud winner of "Most Innovative Team Member" at APAP
-                </p>
-              </div>
-
-              <!-- Cloud Native -->
-              <div
-                class="group rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 p-5 shadow-soft transition hover:-translate-y-0.5"
-              >
-                <div
-                  class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100"
-                >
-                  <span class="text-xl">☁️</span>
-                </div>
-                <h4 class="font-semibold text-slate-900">Cloud Native</h4>
-                <p class="mt-1 text-sm text-slate-700">
-                  AWS enthusiast building scalable cloud solutions
-                </p>
-              </div>
-
-              <!-- AI Research -->
-              <div
-                class="group rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 p-5 shadow-soft transition hover:-translate-y-0.5"
-              >
-                <div
-                  class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-purple-100"
-                >
-                  <span class="text-xl">🤖</span>
-                </div>
-                <h4 class="font-semibold text-slate-900">AI Explorer</h4>
-                <p class="mt-1 text-sm text-slate-700">
-                  Passionate about AI research & academia
-                </p>
-              </div>
-
-              <!-- Versatile Role -->
-              <div
-                class="group rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 p-5 shadow-soft transition hover:-translate-y-0.5"
-              >
-                <div
-                  class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100"
-                >
-                  <span class="text-xl">🎭</span>
-                </div>
-                <h4 class="font-semibold text-slate-900">Multi-Talented</h4>
-                <p class="mt-1 text-sm text-slate-700">
-                  From developer to architect, mastering every role
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <!-- PROJECTS -->
-      <section id="projects" class="mx-auto max-w-7xl px-6 pb-20">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Projects</h2>
-                      <a 
-              href="https://github.com/ogaston?tab=repositories" 
-              target="_blank" 
-              rel="noreferrer" 
-              class="animated-link !text-slate-900"
-            >
-              See more on GitHub →
-            </a>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2">
-          <!-- Shoppxy -->
-          <article class="group rounded-3xl bg-gradient-to-br from-[#60a5fa]/5 to-[#1e40af]/5 hover:from-[#60a5fa]/10 hover:to-[#1e40af]/10 transition-all p-7 shadow-soft">
-            <div class="mb-4 flex items-center gap-3">
-              <img
-                src="https://www.shoppxy.com/android-chrome-192x192.png"
-                alt="Shoppxy logo"
-                class="h-12 w-12 rounded-xl object-contain shadow-soft"
-                onerror="this.src='https://www.shoppxy.com/favicon.ico'"
-              />
-              <div>
-                <h3 class="text-lg font-bold text-slate-900">Shoppxy</h3>
-                <p class="text-sm text-slate-600">
-                  E-commerce Platform
-                </p>
-              </div>
-            </div>
-
-            <p class="text-slate-700">
-              Multi-tenant platform helping local businesses go digital with product catalogs, 
-              payments, analytics, and support. Integrations with AWS, payment gateways, 
-              and comprehensive merchant tools.
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a
-                href="https://www.shoppxy.com"
-                target="_blank"
-                rel="noreferrer"
-                class="inline-flex items-center gap-2 rounded-xl bg-[#6576ff] px-4 py-2 text-white text-sm font-semibold shadow-soft hover:opacity-90 transition"
-              >
-                Visit Site
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="h-5 w-5 fill-white"
-                >
-                  <path d="M5 12h12l-4-4 1.4-1.4L21.8 12l-7.4 5.4L13 16l4-4H5z"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Jobby -->
-          <article
-          class="group rounded-3xl bg-gradient-to-br from-[#34d399]/5 to-[#0f766e]/5 hover:from-[#34d399]/10 hover:to-[#0f766e]/10 transition-all p-7 shadow-soft">
-            <div class="mb-4 flex items-center gap-3">
-              <img
-                src="https://www.jobby.com.do/android-chrome-192x192.png"
-                alt="Jobby logo"
-                class="h-12 w-12 rounded-xl object-contain shadow-soft"
-                onerror="this.src='https://www.jobby.com.do/favicon.ico'"
-              />
-              <div>
-                <h3 class="text-lg font-bold text-slate-900">Jobby</h3>
-                <p class="text-sm text-slate-600">
-                  Create your CV and find your ideal job
-                </p>
-              </div>
-            </div>
-
-            <p class="text-slate-700">
-              Professional CV builder and job search platform with modern templates and 
-              streamlined workflow. Built with <strong>React</strong>, <strong>Node.js</strong>, 
-              and cloud deployments. Features AI-powered job matching and career insights.
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a
-                href="https://www.jobby.com.do"
-                target="_blank"
-                rel="noreferrer"
-                class="inline-flex items-center gap-2 rounded-xl bg-[#34d399] px-4 py-2 text-white text-sm font-semibold shadow-soft hover:opacity-90 transition"
-              >
-                Visit Site
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="h-5 w-5 fill-white"
-                >
-                  <path d="M5 12h12l-4-4 1.4-1.4L21.8 12l-7.4 5.4L13 16l4-4H5z"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- BLOG -->
-      <section id="blog" class="mx-auto max-w-7xl px-6 pb-20">
-        <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">
-            Latest posts
-          </h2>
-          <a href="/blog" class="animated-link !text-slate-900">See all →</a>
-        </div>
-        <div class="mt-6 grid gap-6 md:grid-cols-3">
-          <!-- Post items (the three shown on current site) -->
-          <a
-            class="group overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-slate-100 hover:-translate-y-0.5 hover:shadow-lg transition"
-            href="#"
-          >
-            <div class="aspect-video overflow-hidden bg-slate-50">
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&q=80&w=800&h=450"
-                alt="Team collaboration"
-                class="h-full w-full object-cover transition group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-6">
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-brand.dark/90"
-              >
-                Jul 12, 2021
-              </p>
-              <h3 class="mt-2 font-bold text-slate-900">
-                How to boost your career as a Software Developer/Architect
-              </h3>
-              <p class="mt-2 text-sm text-slate-700">
-                Practical ways I levelled up as an engineer and architect…
-              </p>
-            </div>
+            Read the blog
           </a>
           <a
-            class="group overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-slate-100 hover:-translate-y-0.5 hover:shadow-lg transition"
-            href="#"
+            href="#projects"
+            class="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:border-brand.light"
           >
-            <div class="aspect-video overflow-hidden bg-slate-50">
-              <img
-                src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&q=80&w=800&h=450"
-                alt="Memory and learning"
-                class="h-full w-full object-cover transition group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-6">
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-brand.dark/90"
-              >
-                Sep 22, 2020
-              </p>
-              <h3 class="mt-2 font-bold text-slate-900">
-                How to improve your memory in a simple step
-              </h3>
-              <p class="mt-2 text-sm text-slate-700">
-                A simple, repeatable technique to remember more…
-              </p>
-            </div>
-          </a>
-          <a
-            class="group overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-slate-100 hover:-translate-y-0.5 hover:shadow-lg transition"
-            href="#"
-          >
-            <div class="aspect-video overflow-hidden bg-slate-50">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&q=80&w=800&h=450"
-                alt="Quick development"
-                class="h-full w-full object-cover transition group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-6">
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-brand.dark/90"
-              >
-                Dec 16, 2019
-              </p>
-              <h3 class="mt-2 font-bold text-slate-900">
-                How I launched an important app in a week
-              </h3>
-              <p class="mt-2 text-sm text-slate-700">
-                From idea to launch with constraints and focus…
-              </p>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="mx-auto max-w-7xl px-6 pb-24">
-        <div class="grid gap-8 md:grid-cols-5">
-          <div
-            class="md:col-span-2 rounded-3xl bg-gradient-to-br from-brand.light/10 to-brand.dark/10 p-[1px] shadow-soft"
-          >
-            <div class="rounded-3xl bg-white p-7">
-              <h2 class="text-2xl font-bold tracking-tight text-slate-900">
-                Let's connect
-              </h2>
-              <p class="mt-3 text-slate-700">
-                Have an idea, role, or collaboration in mind? Or just want to
-                say hi? Drop a note and I'll get back to you soon!
-              </p>
-              <ul class="mt-6 space-y-3 text-slate-700">
-                <li class="flex items-center gap-3">
-                  <span
-                    class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand.light/10"
-                  >
-                    <span class="text-sm">🌎</span>
-                  </span>
-                  Remote LATAM
-                </li>
-                <li class="flex items-center gap-3">
-                  <span
-                    class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand.light/10"
-                  >
-                    <span class="text-sm">💼</span>
-                  </span>
-                  Available for consulting & product work
-                </li>
-                <li class="flex items-center gap-3">
-                  <span
-                    class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand.light/10"
-                  >
-                    <span class="text-sm">💬</span>
-                  </span>
-                  Always happy to chat about tech & innovation
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <form
-            class="md:col-span-3 rounded-3xl bg-white p-7 shadow-soft ring-1 ring-slate-100"
-            onsubmit="event.preventDefault(); alert('Thanks! Your message was not actually sent in this static mockup.');"
-          >
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label class="text-sm font-medium text-slate-700">Name</label>
-                <input
-                  type="text"
-                  required
-                  class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand.light"
-                />
-              </div>
-              <div>
-                <label class="text-sm font-medium text-slate-700">Email</label>
-                <input
-                  type="email"
-                  required
-                  class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand.light"
-                />
-              </div>
-              <div class="sm:col-span-2">
-                <label class="text-sm font-medium text-slate-700"
-                  >Message</label
-                >
-                <textarea
-                  rows="5"
-                  required
-                  class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand.light"
-                ></textarea>
-              </div>
-            </div>
-            <button
-              class="mt-5 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-white font-semibold shadow-soft hover:bg-slate-800 transition-colors"
+            View projects
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-5 w-5 fill-brand.dark"
             >
-              Send message
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="h-5 w-5 fill-white"
-              >
-                <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
-              </svg>
-            </button>
-          </form>
+              <path
+                d="M5 12h12l-4-4 1.4-1.4L21.8 12l-7.4 5.4L13 16l4-4H5z"
+              />
+            </svg>
+          </a>
         </div>
-      </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-200 bg-white/70">
-      <div
-        class="mx-auto max-w-7xl px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4"
-      >
-        <p class="text-sm text-slate-600">
-          © <span id="year"></span> · Built with ❤ by
+        <div class="mt-6 flex items-center gap-5 text-sm text-slate-600">
           <a
-            class="font-semibold text-brand.dark hover:underline"
             href="https://twitter.com/ogastonc"
             target="_blank"
+            class="inline-flex items-center gap-2 hover:text-brand.dark"
             rel="noreferrer"
-            >@ogastonc</a
           >
-        </p>
-        <div class="flex items-center gap-4 text-sm text-slate-600">
-          <a href="#about" class="hover:text-brand.dark">About</a>
-          <a href="#projects" class="hover:text-brand.dark">Projects</a>
-          <a href="#blog" class="hover:text-brand.dark">Blog</a>
-          <a href="#contact" class="hover:text-brand.dark">Contact</a>
+            <svg
+              class="h-5 w-5"
+              viewBox="0 0 1200 1227"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                fill="#4299e1"
+                d="M714.163 0c-75.164 31.007-123.09 107.936-113.634 187.999-84.95-4.268-163.61-45.028-218.01-110.223-24.606 42.577-21.588 95.83 7.71 135.615-65.954-2.316-127.733-34.823-166.97-87.123-20.749 48.159-8.228 104.174 31.666 137.483-58.794-8.517-113.6-33.01-158.4-71.48-4.036 52.447 22.665 102.287 67.794 130.468-51.46-2.038-99.517-17.993-141.3-45.207 0 0 0 1.23 0 1.837 0 76.262 53.642 141.724 128.137 156.477-48.98 13.357-101.756 12.009-150.279-3.793 42.64 130.442 163.018 219.046 300.033 221.301-113.555 88.149-255.752 127.438-397.543 104.193 120.69 77.275 263.723 118.38 408.385 118.38 495.683 0 786.658-414.934 768.906-786.658 54.25-39.14 101.205-88.218 138.141-143.96-50.157 22.355-103.733 37.407-158.57 44.239 57.238-34.279 101.205-88.84 121.84-153.658-53.707 31.718-113.006 54.83-174.88 66.558C870.423 44.306 796.166 4.65 714.163 0z"
+              />
+            </svg>
+            @ogastonc
+          </a>
+                          <span class="inline-flex items-center gap-2">
+              <svg
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path class="text-brand.dark" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle class="text-brand.dark" cx="12" cy="10" r="3" />
+              </svg>
+              Remote LATAM
+            </span>
         </div>
       </div>
-    </footer>
+      <div class="flex items-center justify-center">
+          <svg viewBox="0 0 39.12 38.14"
+          width="60%"
+          ><defs><style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:#00bcd4;stroke-miterlimit:10;stroke-width:3.45px;stroke-dasharray:1.11 1.48;}.cls-2{stroke:#17103c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Asset 3</title><g id="Layer_42" data-name="Layer 2"><g id="Layer_6" data-name="Layer 6"><path class="cls-1" d="M33,20.79A15.62,15.62,0,1,1,17.34,5.18,15.62,15.62,0,0,1,33,20.79Z"></path><circle class="cls-2" cx="22.5" cy="16.62" r="15.62"></circle></g></g></svg>
+        </div>
+    </div>
+    
+    
+    
+  </section>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-      const btn = document.getElementById("menuBtn");
-      const sheet = document.getElementById("mobileMenu");
-      btn?.addEventListener("click", () => sheet.classList.toggle("hidden"));
-    </script>
-  </body>
-</html>
+  <!-- ABOUT -->
+  <section id="about" class="mx-auto max-w-7xl px-6 pb-20">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div
+        class="rounded-3xl bg-white p-7 shadow-soft ring-1 ring-slate-100"
+      >
+        <h2 class="text-2xl font-bold tracking-tight">
+          Who I am
+        </h2>
+        <style>
+          .animated-link {
+            position: relative;
+            color: #4299e1;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+          }
+          .animated-link::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4299e1;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+          }
+          .animated-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+          .animated-link:hover {
+            color: #2b6cb0;
+          }
+        </style>
+        <p class="mt-4 text-slate-700">
+          A passionate software engineer with 7+ years of
+          experience crafting scalable applications in fintech, education,
+          and banking. Currently pursuing a
+          <a
+            href="https://www.javeriana.edu.co/maestria-inteligencia-artificial"
+            target="_blank"
+            rel="noreferrer"
+            class="animated-link"
+            >Master's in Intelligent Systems (AI)</a
+          >
+          at Universidad Javeriana because, well, the future is exciting! 🚀
+        </p>
+        <p class="mt-3 text-slate-700">
+          I'm the founder of
+          <a
+            href="https://chalascreations.com"
+            target="_blank"
+            rel="noreferrer"
+            class="animated-link"
+            >Chalas Creations</a
+          >, where we build creative digital solutions that make an impact.
+          When I'm not coding, you'll find me exploring new tech,
+          contributing to open source, or geeking out about AI research.
+        </p>
+
+        <style>
+          .tech-icon {
+            opacity: 0.5;
+            transition: all 0.3s ease;
+          }
+          .tech-icon:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+          }
+          .tooltip {
+            position: relative;
+            display: inline-block;
+          }
+          .tooltip .tooltip-text {
+            visibility: hidden;
+            background-color: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 4px 8px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            font-weight: 500;
+          }
+          .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+          }
+        </style>
+        <h4
+          class="mt-8 text-sm font-semibold text-slate-500 uppercase tracking-wider"
+        >
+          Tech I Love Working With
+        </h4>
+        <div
+          class="mt-3 grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6"
+        >
+          <div class="tooltip">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React"
+              class="tech-icon w-10 h-10"
+            />
+            <span class="tooltip-text">React</span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              class="tech-icon w-10 h-10"
+            />
+            <span class="tooltip-text">Node.js</span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+              class="tech-icon w-10 h-10"
+            />
+            <span class="tooltip-text">Python</span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+              alt="AWS"
+              class="tech-icon w-10 h-10"
+            />
+            <span class="tooltip-text">AWS</span>
+          </div>
+
+          <div class="tooltip">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+              alt="scikit-learn"
+              class="tech-icon w-10 h-10"
+            />
+            <span class="tooltip-text">scikit-learn</span>
+          </div>
+          <div class="tooltip">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL"
+              class="tech-icon w-10 h-10"
+            />
+            <span class="tooltip-text">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-3xl bg-gradient-to-br from-brand.light/5 to-brand.dark/5 p-7"
+      >
+        <h3 class="text-xl font-bold text-slate-900">Quick facts</h3>
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          <!-- Innovation Award -->
+          <div
+            class="group rounded-2xl bg-gradient-to-br from-yellow-50 to-amber-50 p-5 shadow-soft transition hover:-translate-y-0.5"
+          >
+            <div
+              class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-100"
+            >
+              <span class="text-xl">🏆</span>
+            </div>
+            <h4 class="font-semibold text-slate-900">Innovation Star</h4>
+            <p class="mt-1 text-sm text-slate-700">
+              Proud winner of "Most Innovative Team Member" at APAP
+            </p>
+          </div>
+
+          <!-- Cloud Native -->
+          <div
+            class="group rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 p-5 shadow-soft transition hover:-translate-y-0.5"
+          >
+            <div
+              class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100"
+            >
+              <span class="text-xl">☁️</span>
+            </div>
+            <h4 class="font-semibold text-slate-900">Cloud Native</h4>
+            <p class="mt-1 text-sm text-slate-700">
+              AWS enthusiast building scalable cloud solutions
+            </p>
+          </div>
+
+          <!-- AI Research -->
+          <div
+            class="group rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 p-5 shadow-soft transition hover:-translate-y-0.5"
+          >
+            <div
+              class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-purple-100"
+            >
+              <span class="text-xl">🤖</span>
+            </div>
+            <h4 class="font-semibold text-slate-900">AI Explorer</h4>
+            <p class="mt-1 text-sm text-slate-700">
+              Passionate about AI research & academia
+            </p>
+          </div>
+
+          <!-- Versatile Role -->
+          <div
+            class="group rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 p-5 shadow-soft transition hover:-translate-y-0.5"
+          >
+            <div
+              class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100"
+            >
+              <span class="text-xl">🎭</span>
+            </div>
+            <h4 class="font-semibold text-slate-900">Multi-Talented</h4>
+            <p class="mt-1 text-sm text-slate-700">
+              From developer to architect, mastering every role
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <!-- PROJECTS -->
+  <section id="projects" class="mx-auto max-w-7xl px-6 pb-20">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold tracking-tight" style="color: #3f768c;">Projects</h2>
+                  <a 
+          href="https://github.com/ogaston?tab=repositories" 
+          target="_blank" 
+          rel="noreferrer" 
+          class="animated-link !text-slate-900"
+        >
+          See more on GitHub →
+        </a>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Shoppxy -->
+      <article class="group rounded-3xl bg-gradient-to-br from-[#60a5fa]/5 to-[#1e40af]/5 hover:from-[#60a5fa]/10 hover:to-[#1e40af]/10 transition-all p-7 shadow-soft">
+        <div class="mb-4 flex items-center gap-3">
+          <img
+            src="https://www.shoppxy.com/android-chrome-192x192.png"
+            alt="Shoppxy logo"
+            class="h-12 w-12 rounded-xl object-contain shadow-soft"
+            onerror="this.src='https://www.shoppxy.com/favicon.ico'"
+          />
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Shoppxy</h3>
+            <p class="text-sm text-slate-600">
+              E-commerce Platform
+            </p>
+          </div>
+        </div>
+
+        <p class="text-slate-700">
+          Multi-tenant platform helping local businesses go digital with product catalogs, 
+          payments, analytics, and support. Integrations with AWS, payment gateways, 
+          and comprehensive merchant tools.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="https://www.shoppxy.com"
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl bg-[#6576ff] px-4 py-2 text-white text-sm font-semibold shadow-soft hover:opacity-90 transition"
+          >
+            Visit Site
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-5 w-5 fill-white"
+            >
+              <path d="M5 12h12l-4-4 1.4-1.4L21.8 12l-7.4 5.4L13 16l4-4H5z"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Jobby -->
+      <article
+      class="group rounded-3xl bg-gradient-to-br from-[#34d399]/5 to-[#0f766e]/5 hover:from-[#34d399]/10 hover:to-[#0f766e]/10 transition-all p-7 shadow-soft">
+        <div class="mb-4 flex items-center gap-3">
+          <img
+            src="https://www.jobby.com.do/android-chrome-192x192.png"
+            alt="Jobby logo"
+            class="h-12 w-12 rounded-xl object-contain shadow-soft"
+            onerror="this.src='https://www.jobby.com.do/favicon.ico'"
+          />
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Jobby</h3>
+            <p class="text-sm text-slate-600">
+              Create your CV and find your ideal job
+            </p>
+          </div>
+        </div>
+
+        <p class="text-slate-700">
+          Professional CV builder and job search platform with modern templates and 
+          streamlined workflow. Built with <strong>React</strong>, <strong>Node.js</strong>, 
+          and cloud deployments. Features AI-powered job matching and career insights.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="https://www.jobby.com.do"
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl bg-[#34d399] px-4 py-2 text-white text-sm font-semibold shadow-soft hover:opacity-90 transition"
+          >
+            Visit Site
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-5 w-5 fill-white"
+            >
+              <path d="M5 12h12l-4-4 1.4-1.4L21.8 12l-7.4 5.4L13 16l4-4H5z"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="mx-auto max-w-7xl px-6 pb-20">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold tracking-tight" style="color: #3f768c;">
+        Latest posts
+      </h2>
+      <a href="/blog" class="animated-link !text-slate-900">See all →</a>
+    </div>
+    <div class="mt-6 grid gap-6 md:grid-cols-3">
+      {% for post in collections.posts | head(3) %}
+      <a
+        class="group overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-slate-100 hover:-translate-y-0.5 hover:shadow-lg transition"
+        href="{{ post.url }}"
+      >
+        <div class="aspect-video overflow-hidden bg-slate-50">
+          {% if post.data.cover %}
+          <img
+            src="{{ post.data.cover }}"
+            alt="{{ post.data.title }}"
+            class="h-full w-full object-cover transition group-hover:scale-105"
+            loading="lazy"
+          />
+          {% else %}
+          <div class="h-full w-full bg-gradient-to-br from-brand.light/20 to-brand.dark/20 flex items-center justify-center">
+            <svg class="h-16 w-16 text-brand.dark/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+              <circle cx="12" cy="13" r="3"/>
+            </svg>
+          </div>
+          {% endif %}
+        </div>
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-wide text-brand.dark/90">
+            {{ post.data.date | readableDate }}
+          </p>
+          <h3 class="mt-2 font-bold text-slate-900">
+            {{ post.data.title }}
+          </h3>
+          {% if post.data.description %}
+          <p class="mt-2 text-sm text-slate-700">
+            {{ post.data.description }}
+          </p>
+          {% else %}
+          <p class="mt-2 text-sm text-slate-700">
+            {{ post.templateContent | truncate(120) }}
+          </p>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-8 md:grid-cols-5">
+      <div
+        class="md:col-span-2 rounded-3xl bg-gradient-to-br from-brand.light/10 to-brand.dark/10 p-[1px] shadow-soft"
+      >
+        <div class="rounded-3xl bg-white p-7">
+          <h2 class="text-2xl font-bold tracking-tight text-sky-600">
+            Let's connect
+          </h2>
+          <p class="mt-3 text-slate-700">
+            Have an idea, role, or collaboration in mind? Or just want to
+            say hi? Drop a note and I'll get back to you soon!
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li class="flex items-center gap-3">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand.light/10"
+              >
+                <span class="text-sm">🌎</span>
+              </span>
+              Remote LATAM
+            </li>
+            <li class="flex items-center gap-3">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand.light/10"
+              >
+                <span class="text-sm">💼</span>
+              </span>
+              Available for consulting & product work
+            </li>
+            <li class="flex items-center gap-3">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand.light/10"
+              >
+                <span class="text-sm">💬</span>
+              </span>
+              Always happy to chat about tech & innovation
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <form
+        class="md:col-span-3 rounded-3xl bg-white p-7 shadow-soft ring-1 ring-slate-100"
+        onsubmit="event.preventDefault(); alert('Thanks! Your message was not actually sent in this static mockup.');"
+      >
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="text-sm font-medium text-slate-700">Name</label>
+            <input
+              type="text"
+              required
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand.light"
+            />
+          </div>
+          <div>
+            <label class="text-sm font-medium text-slate-700">Email</label>
+            <input
+              type="email"
+              required
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand.light"
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="text-sm font-medium text-slate-700"
+              >Message</label
+            >
+            <textarea
+              rows="5"
+              required
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand.light"
+            ></textarea>
+          </div>
+        </div>
+        <button
+          class="mt-5 inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-white font-semibold shadow-soft transition-colors bg-sky-600"
+        
+        >
+          Send message
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="h-5 w-5 fill-white"
+          >
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+
+   

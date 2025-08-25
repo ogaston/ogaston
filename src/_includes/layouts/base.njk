@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'partials/head.njk' %}
+    {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  </head>
+  <body class="bg-white text-slate-800">
+    {% include 'partials/header.njk' %}
+    <main id="content">
+      {{ content | safe }}
+    </main>
+    {% include 'partials/footer.njk' %}
+  </body>
+</html>
