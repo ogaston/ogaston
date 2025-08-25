@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to boost your career as a Software Developer/Architect · Omar Gastón Chalas</title>
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: { light: '#4299e1', dark: '#2b6cb0' } },
+            boxShadow: { soft: '0 10px 25px rgb(0 0 0 / 0.08)' }
+          }
+        }
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Meta (SEO/OpenGraph) -->
+    <meta name="description" content="Practical strategies to accelerate your growth as a software developer or architect." />
+    <meta property="og:title" content="How to boost your career as a Software Developer/Architect" />
+    <meta property="og:description" content="Practical strategies to accelerate your growth as a software developer or architect." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/images/blog/career-boost-hero.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+      html{scroll-behavior:smooth} body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+      .prose h2{ @apply text-slate-900 font-extrabold tracking-tight mt-12 mb-3 text-2xl; }
+      .prose h3{ @apply text-slate-900 font-bold mt-8 mb-2 text-xl; }
+      .prose p{ @apply text-slate-700 leading-relaxed my-4; }
+      .prose a{ @apply text-brand.dark underline decoration-1 underline-offset-2; }
+      .prose ul{ @apply list-disc pl-6 my-4 text-slate-700; }
+      .prose ol{ @apply list-decimal pl-6 my-4 text-slate-700; }
+      .prose code{ @apply rounded bg-slate-100 px-1 py-0.5 text-sm; }
+      .prose pre{ @apply rounded-2xl bg-slate-900 text-white p-4 overflow-x-auto my-6; }
+      .toc a{ @apply block text-sm text-slate-600 hover:text-brand.dark; }
+      .chip{ @apply inline-flex items-center gap-2 rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700; }
+    </style>
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to boost your career as a Software Developer/Architect",
+      "datePublished": "2021-07-12",
+      "dateModified": "2021-07-12",
+      "author": {"@type": "Person", "name": "Omar Gastón Chalas"},
+      "publisher": {"@type": "Organization", "name": "ogaston.com"},
+      "image": "/images/blog/career-boost-hero.jpg",
+      "description": "Practical strategies to accelerate your growth as a software developer or architect."
+    }
+    </script>
+  </head>
+  <body class="bg-white text-slate-800">
+    <!-- Progress bar -->
+    <div id="progress" class="fixed inset-x-0 top-0 h-1 bg-brand.light/30" style="--w:0">
+      <div class="h-full bg-brand.light" style="width:var(--w);"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="relative z-10">
+      <div class="mx-auto max-w-7xl px-6 py-6">
+        <nav class="flex items-center justify-between rounded-2xl bg-white/70 backdrop-blur px-5 py-4 shadow-soft">
+          <a href="/" class="flex items-center gap-1">
+            <svg class="fill-current h-8 md:w-8 xs:w-12 mr-1" viewBox="0 0 540.77 243.63" aria-hidden="true"><defs><style>.scls-1{fill:#00bcd4;}.scls-2{fill:#fff;}.scls-3{fill:#3f768c;}</style></defs><g><g><path class="scls-1" d="M165,128.32c-.1-17.79,1.84-35.29,8-52.08,11.73-32,34.69-51.08,67.85-57.72,22.75-4.55,45.59-4.21,67.89,2.69,30.77,9.51,49.67,30.84,58.84,61.21,6,20,6.86,40.61,5.45,61.33-.95,14-3.59,27.63-8.94,40.63-12.28,29.89-34.56,47.92-66,54.32-22.74,4.63-45.58,4.29-67.87-2.65-30.16-9.38-49.15-30.11-58.66-59.87C166.6,160.62,164.92,144.59,165,128.32Z"></path><path class="scls-2" d="M324.84,129.12c-.24,13.39-1.33,27.23-6.29,40.48-7.77,20.71-23.77,32.14-45.95,32.74-11.78.32-23.16-1.25-33.31-7.79-11-7.11-17.48-17.66-20.8-30-6.61-24.54-6.83-49.26.48-73.66,5.87-19.59,18.59-32.59,39.47-35.71,16.84-2.52,33-.8,46.51,11.07,9.42,8.28,13.95,19.34,16.73,31.24C324.06,107.7,324.75,118.09,324.84,129.12Z"></path><polygon class="scls-3" points="31.86 87.46 24.12 129.91 144.31 243.28 152.05 200.83 31.86 87.46"></polygon><polygon class="scls-3" points="24.56 93.23 30.92 136.85 154.41 43.62 148.05 0 24.56 93.23"></polygon><polygon class="scls-3" points="24.12 129.91 0 109.31 30.68 88.72 34.77 97.74 24.12 129.91"></polygon><polygon class="scls-3" points="508.91 87.8 516.65 130.25 396.46 243.63 388.72 201.18 508.91 87.8"></polygon><polygon class="scls-3" points="516.21 93.58 509.85 137.19 386.36 43.96 392.72 0.34 516.21 93.58"></polygon><polygon class="scls-3" points="516.65 130.25 540.77 109.65 510.09 89.07 506 98.08 516.65 130.25"></polygon></g></g></svg>
+            <span class="font-extrabold tracking-tight text-slate-900">ogaston.com</span>
+          </a>
+
+          <div class="hidden items-center gap-6 md:flex">
+            <a href="/index.html#about" class="text-slate-700 hover:text-brand.dark font-medium">About</a>
+            <a href="/index.html#projects" class="text-slate-700 hover:text-brand.dark font-medium">Projects</a>
+            <a href="/blog.html" class="text-slate-700 hover:text-brand.dark font-medium">Blog</a>
+            <a href="/index.html#contact" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-white font-semibold shadow-soft hover:opacity-95 transition">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO / TITLE -->
+    <section class="mx-auto max-w-7xl px-6 pt-8">
+      <a href="/blog.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-brand.dark">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="m14 7-5 5 5 5V7z"/></svg>
+        Back to all posts
+      </a>
+      <h1 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">How to boost your career as a Software Developer/Architect</h1>
+      <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-slate-600">
+        <span>Jul 12, 2021</span>
+        <span>•</span>
+        <span>6 min read</span>
+        <span>•</span>
+        <span class="chip">Career</span>
+        <span class="chip">Engineering</span>
+      </div>
+      <div class="relative mt-6 overflow-hidden rounded-sm bg-slate-100">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&q=80&w=1600&h=900" alt="Team collaboration" class="hero-img w-full object-cover object-center max-h-[200px]"/>
+        <!-- bottom fade to white to preserve proportions -->
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-white"></div>
+        </div>
+    </section>
+
+    <!-- CONTENT + TOC -->
+    <main class="mx-auto max-w-7xl px-6 pb-20">
+      <div class="mt-10 grid gap-10 lg:grid-cols-[1fr_320px]">
+        <!-- Article -->
+        <article class="prose max-w-none">
+          <h2 id="mindset">1) Upgrade your mindset</h2>
+          <p>Great careers are compounding curves. Bias toward learning velocity, write things down, and instrument your work with feedback loops. A simple weekly retrospective (“what moved the needle?”) beats vague goals.</p>
+
+          <h3 id="systems">Operate with systems</h3>
+          <p>Create small, dependable systems: a <em>decision journal</em>, a <em>today/next</em> list, and a <em>learning backlog</em>. Ship reliably, learn deliberately.</p>
+
+          <h2 id="portfolio">2) Build a portfolio of outcomes</h2>
+          <p>Outcomes > activities. Replace “worked on X” with “reduced build times by 42% by parallelizing CI and caching dependencies.” Keep before/after metrics.</p>
+          <ul>
+            <li>Pick projects with measurable impact.</li>
+            <li>Seek constraints—deadlines, SLAs, SLOs.</li>
+            <li>Tell the story using STAR: <strong>Situation</strong>, <strong>Task</strong>, <strong>Action</strong>, <strong>Result</strong>.</li>
+          </ul>
+
+          <h2 id="architecture">3) Think in architecture even as an IC</h2>
+          <p>Model domains, draw sequence/state diagrams, and drive ADRs. Focus on latency, throughput, failure modes, 
+            and cost. Automation is a feature.</p>
+
+          <h2 id="communication">4) Communicate like a staff engineer</h2>
+          <p>Write crisp design docs, remove ambiguity with examples, and close the loop after decisions. Communication scales your impact.</p>
+
+          <h2 id="practice">5) Practice deliberately</h2>
+          <p>Pick a narrow skill (e.g., <code>streams</code> in Node.js, or <code>React Suspense</code>), define a tiny project, and 
+            iterate with code reviews and benchmarks.</p>
+
+          <h3 id="resources">Resources</h3>
+          <ul>
+            <li><a href="#">My design doc template</a></li>
+            <li><a href="#">Architecture interview practice set</a></li>
+            <li><a href="#">STAR story worksheet</a></li>
+          </ul>
+
+          <hr class="my-10 border-slate-200"/>
+          <p class="text-sm text-slate-500">Spotted a typo? <a href="#" class="underline">Open a PR</a> or <a href="/index.html#contact" class="underline">send me a note</a>.</p>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="lg:pl-6">
+          <!-- TOC -->
+          <div class="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-100">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500">On this page</h3>
+            <ol class="mt-3 space-y-2 toc list-decimal pl-5">
+            <li><a href="#mindset">Upgrade your mindset</a></li>
+            <li><a href="#systems">Operate with systems</a></li>
+            <li><a href="#portfolio">Build a portfolio of outcomes</a></li>
+            <li><a href="#architecture">Think in architecture</a></li>
+            <li><a href="#communication">Communicate like a staff engineer</a></li>
+            <li><a href="#practice">Practice deliberately</a></li>
+            <li><a href="#resources">Resources</a></li>
+            </ol>
+            </div>
+
+          <!-- Share -->
+          <div class="mt-6 rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-100">
+            <h4 class="font-semibold text-slate-900">Share</h4>
+            <div class="mt-3 grid grid-cols-3 gap-2">
+                <a id="share-x" aria-label="Share on X" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-3 py-2 text-sm hover:border-brand.light" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M18.244 3H21l-6.54 7.47L22 21h-6.2l-4.06-5.27L6.8 21H4l7.02-8.02L2 3h6.3l3.67 4.9L18.244 3Zm-1.08 16h1.68L7.92 5h-1.7l10.94 14Z"/></svg>
+                
+                </a>
+                <a id="share-ln" aria-label="Share on LinkedIn" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-3 py-2 text-sm hover:border-brand.light" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M6.94 6.5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.5 8.75h3.5V21H3.5V8.75Zm6 0H13v1.68h.05c.49-.93 1.68-1.9 3.46-1.9 3.7 0 4.39 2.44 4.39 5.61V21h-3.5v-5.47c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.43-2.11 2.9V21H9.5V8.75Z"/></svg>
+                
+                </a>
+                <div class="relative">
+                <button id="copy" aria-describedby="copy-tip" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 px-3 py-2 text-sm hover:border-brand.light">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/></svg>
+                Copy
+                </button>
+                <span id="copy-tip" role="tooltip" class="pointer-events-none absolute left-1/2 -translate-x-1/2 -top-9 rounded-lg bg-slate-900 px-2 py-1 text-xs text-white opacity-0 translate-y-1 transition">Copied!</span>
+                </div>
+                </div>
+          </div>
+
+          <!-- Author -->
+          <div class="mt-6 rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-100">
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-brand.light/20 to-brand.dark/20">
+                <img src="assets/img/me.jpeg" alt="Omar Gastón Chalas" class="h-12 w-12 rounded-2xl object-cover"/>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-900">Omar Gastón Chalas</p>
+                <p class="md:text-xs text-sm text-slate-600">Software Engineer · Cloud & AI</p>
+              </div>
+            </div>
+            <p class="mt-3 text-sm text-slate-700">I build useful products and developer experiences across JavaScript, cloud, and AI. Writing to think better.</p>
+          </div>
+        </aside>
+      </div>
+
+      <!-- CTA / Newsletter -->
+      <section class="mx-auto mt-12 max-w-7xl">
+        <div class="rounded-3xl bg-gradient-to-r from-brand.light/10 to-brand.dark/10 p-[1px] shadow-soft">
+          <div class="rounded-3xl bg-white p-6 sm:p-8">
+            <div class="sm:flex sm:items-center sm:justify-between gap-6">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">Get new posts in your inbox</h3>
+                <p class="mt-1 text-slate-700">No spam. Just practical notes on engineering, cloud, and AI.</p>
+              </div>
+              <form class="mt-4 sm:mt-0 flex w-full sm:w-auto gap-2" onsubmit="event.preventDefault(); alert('Subscribed (demo)');">
+                <input type="email" required placeholder="you@example.com" class="w-full sm:w-72 rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand.light" />
+                <button class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-white font-semibold shadow-soft hover:opacity-95 transition">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Next/Prev -->
+      <nav class="mx-auto mt-12 max-w-7xl">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <a href="#" class="group rounded-2xl border border-slate-200 p-4 hover:border-brand.light">
+            <p class="text-xs uppercase tracking-wide text-slate-500">Previous</p>
+            <p class="mt-1 font-semibold text-slate-900 group-hover:underline">How to improve your memory in a simple step</p>
+          </a>
+          <a href="#" class="group rounded-2xl border border-slate-200 p-4 hover:border-brand.light text-right">
+            <p class="text-xs uppercase tracking-wide text-slate-500">Next</p>
+            <p class="mt-1 font-semibold text-slate-900 group-hover:underline">Terraform Landing Zone — practical notes</p>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white/70 mt-16">
+      <div class="mx-auto max-w-7xl px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-600">© <span id="year"></span> · Built with ❤ by <a class="font-semibold text-brand.dark hover:underline" href="https://twitter.com/ogastonc" target="_blank" rel="noreferrer">@ogastonc</a></p>
+        <div class="flex items-center gap-4 text-sm text-slate-600">
+          <a href="/index.html#about" class="hover:text-brand.dark">About</a>
+          <a href="/index.html#projects" class="hover:text-brand.dark">Projects</a>
+          <a href="/blog.html" class="hover:text-brand.dark">Blog</a>
+          <a href="/index.html#contact" class="hover:text-brand.dark">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        
+        // progress bar
+        const progress = document.getElementById('progress');
+        const onScroll = () => {
+        const h = document.documentElement;
+        const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+        progress.style.setProperty('--w', Math.min(1, scrolled) * 100 + '%');
+        };
+        document.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        
+        
+        // share buttons
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(document.title);
+        document.getElementById('share-x').onclick = () => window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        document.getElementById('share-ln').onclick = () => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        document.getElementById('copy').onclick = async () => {
+        try {
+        await navigator.clipboard.writeText(window.location.href);
+        const tip = document.getElementById('copy-tip');
+        tip.classList.remove('opacity-0','translate-y-1');
+        tip.classList.add('opacity-100','-translate-y-0');
+        setTimeout(()=>{
+        tip.classList.add('opacity-0','translate-y-1');
+        }, 1500);
+        } catch(e){ console.error('Copy failed'); }
+        };
+        </script>
+  </body>
+</html>
