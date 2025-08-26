@@ -11,9 +11,9 @@ prevPost:
   data:
     title: How to improve your memeory
 nextPost:
-  url: /blog/terraform-landing-zone/
+  url: /blog/5-things-you-probably-dont-know-about-node-js/
   data:
-    title: Terraform Landing Zone — practical notes
+    title: 5 Things You Probably Don't Know About Node.js
 
 toc:
   - { id: certification, text: "Get a Certification" }
