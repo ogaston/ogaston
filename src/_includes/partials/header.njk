@@ -5,12 +5,58 @@
         {% include 'partials/logo.njk' %}
         <span class="font-extrabold tracking-tight text-slate-900">{{ site.name }}</span>
       </a>
+      
+      <!-- Desktop Menu -->
       <div class="hidden items-center gap-6 md:flex">
         <a href="{{ '/#about' | url }}" class="text-slate-700 hover:text-brand.dark font-medium">About</a>
         <a href="{{ '/#projects' | url }}" class="text-slate-700 hover:text-brand.dark font-medium">Projects</a>
         <a href="{{ '/blog' | url }}" class="text-slate-700 hover:text-brand.dark font-medium">Blog</a>
         <a href="{{ '/#contact' | url }}" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-white font-semibold shadow-soft hover:opacity-95 bg-sky-600">Contact</a>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-button" 
+        class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 group"
+        aria-label="Toggle mobile menu"
+      >
+        <span class="w-6 h-0.5 bg-slate-700 transform transition duration-300 ease-in-out group-hover:bg-sky-600" id="line1"></span>
+        <span class="w-6 h-0.5 bg-slate-700 transform transition duration-300 ease-in-out group-hover:bg-sky-600" id="line2"></span>
+        <span class="w-6 h-0.5 bg-slate-700 transform transition duration-300 ease-in-out group-hover:bg-sky-600" id="line3"></span>
+      </button>
     </nav>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div 
+    id="mobile-menu" 
+    class="fixed inset-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out bg-white/95 backdrop-blur-md"
+    style="top: 0;"
+  >
+    <div class="flex flex-col h-full">
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between px-6 py-6">
+        <a href="{{ '/' | url }}" class="flex items-center gap-2">
+          {% include 'partials/logo.njk' %}
+          <span class="font-extrabold tracking-tight text-slate-900">{{ site.name }}</span>
+        </a>
+        <button 
+          id="mobile-menu-close" 
+          class="flex flex-col justify-center items-center w-8 h-8 group"
+          aria-label="Close mobile menu"
+        >
+          <span class="w-6 h-0.5 bg-slate-700 transform rotate-45 translate-y-0.5 transition duration-300 ease-in-out group-hover:bg-red-500"></span>
+          <span class="w-6 h-0.5 bg-slate-700 transform -rotate-45 -translate-y-0.5 transition duration-300 ease-in-out group-hover:bg-red-500"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Links -->
+      <div class="flex-1 flex flex-col justify-center px-6 space-y-8">
+        <a href="{{ '/#about' | url }}" class="text-3xl font-bold text-slate-800 hover:text-sky-600 transform hover:translate-x-2 transition-all duration-200 mobile-menu-link">About</a>
+        <a href="{{ '/#projects' | url }}" class="text-3xl font-bold text-slate-800 hover:text-sky-600 transform hover:translate-x-2 transition-all duration-200 mobile-menu-link">Projects</a>
+        <a href="{{ '/blog' | url }}" class="text-3xl font-bold text-slate-800 hover:text-sky-600 transform hover:translate-x-2 transition-all duration-200 mobile-menu-link">Blog</a>
+        <a href="{{ '/#contact' | url }}" class="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-white font-semibold shadow-soft hover:opacity-95 bg-sky-600 text-xl mobile-menu-link">Contact</a>
+      </div>
+    </div>
   </div>
 </header>

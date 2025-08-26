@@ -1,9 +1,166 @@
-{% extends "layouts/base.njk" %}
-{% block content %}
-<section class="mx-auto max-w-7xl px-6 py-10">
-  <h1 class="text-3xl font-extrabold tracking-tight text-sky-600">{{ title }}</h1>
-  <div class="mt-6">
-    {{ content | safe }}
-  </div>
-</section>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'partials/head.njk' %}
+    {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+    
+    <!-- Open Graph Meta Tags for Pages -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title or site.name }}">
+    {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    
+    <!-- Twitter Card Meta Tags for Pages -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <meta name="twitter:title" content="{{ title or site.name }}">
+    {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+    
+    <!-- JSON-LD Structured Data for Blog Collection Page -->
+    {% if page.url == '/blog/' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "{{ title }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "description": "{{ description }}",
+      "author": {
+        "@type": "Person",
+        "name": "Omar Gastón Chalas",
+        "url": "{{ site.url }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}"
+      },
+      "blogPost": [
+        {% for post in collections.posts | head(10) %}{
+          "@type": "BlogPosting",
+          "headline": "{{ post.data.title }}",
+          "url": "{{ site.url }}{{ post.url }}",
+          "datePublished": "{{ post.data.date | date('c') }}",
+          "author": {
+            "@type": "Person",
+            "name": "Omar Gastón Chalas"
+          }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+    </script>
+    {% endif %}
+  </head>
+  <body class="bg-white text-slate-800">
+    {% include 'partials/header.njk' %}
+    <main id="content">
+      {{ content | safe }}
+    </main>
+    {% include 'partials/footer.njk' %}
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const menuLinks = document.querySelectorAll('.mobile-menu-link');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+          if (!mobileMenu) return;
+          
+          isMenuOpen = !isMenuOpen;
+          
+          if (isMenuOpen) {
+            // Open menu
+            mobileMenu.classList.remove('-translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            
+            // Animate hamburger to X
+            line1.classList.add('rotate-45', 'translate-y-2');
+            line2.classList.add('opacity-0');
+            line3.classList.add('-rotate-45', '-translate-y-2');
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+          } else {
+            // Close menu
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('-translate-x-full');
+            
+            // Reset hamburger
+            line1.classList.remove('rotate-45', 'translate-y-2');
+            line2.classList.remove('opacity-0');
+            line3.classList.remove('-rotate-45', '-translate-y-2');
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+          }
+        }
+
+        // Toggle menu on hamburger button click
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleMenu();
+          });
+        }
+        
+        // Close menu on close button click
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleMenu();
+          });
+        }
+        
+        // Close menu when clicking on menu links
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (isMenuOpen) {
+              toggleMenu();
+            }
+          });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && isMenuOpen) {
+            toggleMenu();
+          }
+        });
+
+        // Staggered animation for menu links
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+              const menu = mutation.target;
+              if (menu.classList.contains('translate-x-0')) {
+                // Menu is opening - animate links in
+                menuLinks.forEach((link, index) => {
+                  link.style.opacity = '0';
+                  link.style.transform = 'translateX(-20px)';
+                  setTimeout(() => {
+                    link.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    link.style.opacity = '1';
+                    link.style.transform = 'translateX(0)';
+                  }, 100 + (index * 50));
+                });
+              }
+            }
+          });
+        });
+
+        if (mobileMenu) {
+          observer.observe(mobileMenu, { attributes: true, attributeFilter: ['class'] });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mobile Menu Animations */
+@layer components {
+  .mobile-menu-link {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  /* Hamburger animation improvements */
+  #mobile-menu-button span {
+    transition-property: transform, opacity, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+  
+  /* Enhanced backdrop blur for mobile menu */
+  #mobile-menu {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  /* Hide mobile menu on desktop screens */
+  @media (min-width: 768px) {
+    #mobile-menu {
+      display: none !important;
+    }
+  }
+}

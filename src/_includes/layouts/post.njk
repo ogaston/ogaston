@@ -2,10 +2,78 @@
 <html lang="en">
   <head>
     {% include "partials/head.njk" %}
+    
+    <!-- Enhanced Meta Description -->
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="article">
     <meta property="og:title" content="{{ title }}">
     {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
-    {% if cover %}<meta property="og:image" content="{{ cover }}">{% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    {% if cover %}<meta property="og:image" content="{{ cover }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ title }}">{% endif %}
+    <meta property="article:author" content="Omar Gastón Chalas">
+    <meta property="article:published_time" content="{{ date | date('c') }}">
+    {% if tags %}{% for tag in tags %}<meta property="article:tag" content="{{ tag }}">{% endfor %}{% endif %}
+    <meta property="article:section" content="{% if tags %}{{ tags[0] }}{% else %}Technology{% endif %}">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <meta name="twitter:title" content="{{ title }}">
+    {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+    {% if cover %}<meta name="twitter:image" content="{{ cover }}">
+    <meta name="twitter:image:alt" content="{{ title }}">{% endif %}
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ title }}",
+      {% if description %}"description": "{{ description }}",{% endif %}
+      {% if cover %}"image": {
+        "@type": "ImageObject",
+        "url": "{{ cover }}",
+        "width": 1200,
+        "height": 630
+      },{% endif %}
+      "author": {
+        "@type": "Person",
+        "name": "Omar Gastón Chalas",
+        "url": "{{ site.url }}",
+        "sameAs": [
+          "https://twitter.com/{{ site.twitter }}",
+          "https://linkedin.com/in/ogaston",
+          "https://github.com/ogaston"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/assets/img/favicon.ico"
+        }
+      },
+      "datePublished": "{{ date | date('c') }}",
+      "dateModified": "{{ date | date('c') }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+      },
+      "url": "{{ site.url }}{{ page.url }}",
+      {% if tags %}"keywords": "{% for tag in tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}",{% endif %}
+      "articleSection": "{% if tags %}{{ tags[0] }}{% else %}Technology{% endif %}",
+      "wordCount": "{{ content | striptags | wordcount }}"
+    }
+    </script>
   </head>
   <body class="bg-white text-slate-800">
     {% include "partials/header.njk" %}

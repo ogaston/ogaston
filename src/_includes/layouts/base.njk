@@ -3,6 +3,56 @@
   <head>
     {% include 'partials/head.njk' %}
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+    
+    <!-- Open Graph Meta Tags for Non-Article Pages -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title or site.name }}">
+    {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags for Non-Article Pages -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.twitter }}">
+    <meta name="twitter:title" content="{{ title or site.name }}">
+    {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+    
+    <!-- JSON-LD Structured Data for Website/Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Person", "Organization"],
+      "name": "Omar Gastón Chalas",
+      "alternateName": "{{ site.name }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/assets/img/favicon.ico",
+      "image": "{{ site.url }}/assets/img/me.jpeg",
+      "description": "Senior Software Engineer specializing in Cloud & Web technologies, AI enthusiast, and technical writer.",
+      "sameAs": [
+        "https://twitter.com/{{ site.twitter }}",
+        "https://linkedin.com/in/ogaston",
+        "https://github.com/ogaston"
+      ],
+      "jobTitle": "Senior Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "{{ site.name }}"
+      },
+      "knowsAbout": [
+        "Software Engineering",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Web Development",
+        "Node.js",
+        "JavaScript",
+        "TypeScript",
+        "AWS",
+        "Azure"
+      ]
+    }
+    </script>
   </head>
   <body class="bg-white text-slate-800">
     {% include 'partials/header.njk' %}
@@ -10,5 +60,105 @@
       {{ content | safe }}
     </main>
     {% include 'partials/footer.njk' %}
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const menuLinks = document.querySelectorAll('.mobile-menu-link');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+          if (!mobileMenu) return;
+          
+          isMenuOpen = !isMenuOpen;
+          
+          if (isMenuOpen) {
+            // Open menu
+            mobileMenu.classList.remove('-translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            
+            // Animate hamburger to X
+            line1.classList.add('rotate-45', 'translate-y-2');
+            line2.classList.add('opacity-0');
+            line3.classList.add('-rotate-45', '-translate-y-2');
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+          } else {
+            // Close menu
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('-translate-x-full');
+            
+            // Reset hamburger
+            line1.classList.remove('rotate-45', 'translate-y-2');
+            line2.classList.remove('opacity-0');
+            line3.classList.remove('-rotate-45', '-translate-y-2');
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+          }
+        }
+
+        // Toggle menu on hamburger button click
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleMenu();
+          });
+        }
+        
+        // Close menu on close button click
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleMenu();
+          });
+        }
+        
+        // Close menu when clicking on menu links
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (isMenuOpen) {
+              toggleMenu();
+            }
+          });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && isMenuOpen) {
+            toggleMenu();
+          }
+        });
+
+        // Staggered animation for menu links
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+              const menu = mutation.target;
+              if (menu.classList.contains('translate-x-0')) {
+                // Menu is opening - animate links in
+                menuLinks.forEach((link, index) => {
+                  link.style.opacity = '0';
+                  link.style.transform = 'translateX(-20px)';
+                  setTimeout(() => {
+                    link.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    link.style.opacity = '1';
+                    link.style.transform = 'translateX(0)';
+                  }, 100 + (index * 50));
+                });
+              }
+            }
+          });
+        });
+
+        observer.observe(mobileMenu, { attributes: true, attributeFilter: ['class'] });
+      });
+    </script>
   </body>
 </html>

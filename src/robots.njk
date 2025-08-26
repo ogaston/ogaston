@@ -1,0 +1,19 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+User-agent: *
+Allow: /
+
+# Block crawling of admin/private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_/
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Crawl delay (optional - be respectful)
+Crawl-delay: 1

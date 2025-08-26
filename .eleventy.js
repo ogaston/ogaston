@@ -17,6 +17,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("truncate", (str, length = 100) =>
         str.length > length ? str.substring(0, length) + "…" : str
     );
+    eleventyConfig.addFilter("date", (dateObj, format) => {
+        if (format === "c") {
+            return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISO();
+        }
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(format);
+    });
+    eleventyConfig.addFilter("striptags", str => str ? str.replace(/<[^>]*>/g, "") : "");
+    eleventyConfig.addFilter("wordcount", str => str ? str.split(/\s+/).length : 0);
 
     // Collections
     eleventyConfig.addCollection("posts", (collection) =>

@@ -1,9 +1,27 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- Primary Meta Tags -->
 <title>{{ title or site.name }}</title>
+<meta name="title" content="{{ title or site.name }}">
+{% if description %}<meta name="description" content="{{ description }}">{% endif %}
+<meta name="author" content="Omar Gastón Chalas">
+{% if tags %}<meta name="keywords" content="{% for tag in tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}, software engineering, web development, cloud, AI">{% endif %}
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Assets -->
 <link rel="stylesheet" href="/assets/css/site.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.ico">
 <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet"/>
