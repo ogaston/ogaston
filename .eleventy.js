@@ -3,6 +3,9 @@ const readingTime = require("reading-time");
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
+
+    eleventyConfig.addGlobalData("isProd", process.env.ELEVENTY_ENV === "production" || process.env.NODE_ENV === "production");
+
     // Passthrough assets
     eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
