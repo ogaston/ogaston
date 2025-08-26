@@ -7,9 +7,9 @@ tags: [Career, Engineering]
 cover: https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&q=80&w=1400&h=700
 
 prevPost:
-  url: /blog/how-to-improve-your-memory/
+  url: /blog/how-i-launched-a-simple-but-important-application-in-a-week-or-less/
   data:
-    title: How to improve your memeory
+    title: How I Launched a Simple but Important Application in a Week (or Less)
 nextPost:
   url: /blog/5-things-you-probably-dont-know-about-node-js/
   data:
