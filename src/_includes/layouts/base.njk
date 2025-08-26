@@ -11,13 +11,19 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="{{ site.image }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Omar Gastón Chalas - Senior Software Engineer">
     
     <!-- Twitter Card Meta Tags for Non-Article Pages -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
     <meta name="twitter:title" content="{{ title or site.name }}">
     {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+    <meta name="twitter:image" content="{{ site.image }}">
+    <meta name="twitter:image:alt" content="Omar Gastón Chalas - Senior Software Engineer">
     
     <!-- JSON-LD Structured Data for Website/Organization -->
     <script type="application/ld+json">
@@ -32,13 +38,22 @@
       "description": "Senior Software Engineer specializing in Cloud & Web technologies, AI enthusiast, and technical writer.",
       "sameAs": [
         "https://twitter.com/{{ site.twitter }}",
-        "https://linkedin.com/in/ogaston",
+        "{{ site.linkedin }}",
         "https://github.com/ogaston"
       ],
       "jobTitle": "Senior Software Engineer",
       "worksFor": {
         "@type": "Organization",
         "name": "{{ site.name }}"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "{{ site.location.region }}",
+        "addressCountry": "{{ site.location.country }}"
+      },
+      "workLocation": {
+        "@type": "Place",
+        "name": "{{ site.location.description }}"
       },
       "knowsAbout": [
         "Software Engineering",
@@ -51,6 +66,30 @@
         "AWS",
         "Azure"
       ]
+    }
+    </script>
+    
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ site.name }}",
+      "alternateName": "Omar Gastón Chalas Portfolio",
+      "url": "{{ site.url }}",
+      "description": "Senior Software Engineer specializing in Cloud & Web technologies, AI enthusiast, and technical writer.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Omar Gastón Chalas"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ site.url }}/blog/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
   </head>

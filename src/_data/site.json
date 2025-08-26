@@ -2,5 +2,13 @@
   "name": "ogaston.com",
   "url": "https://ogaston.com",
   "brand": { "light": "#4299e1", "dark": "#2b6cb0" },
-  "twitter": "ogastonc"
+  "twitter": "ogastonc",
+  "linkedin": "https://www.linkedin.com/in/omar-gaston-chalas/",
+  "image": "https://ogaston.com/assets/img/me.jpeg",
+  "author_image": "https://ogaston.com/assets/img/me.jpeg",
+  "location": {
+    "region": "Latin America",
+    "country": "Remote",
+    "description": "Remote LATAM"
+  }
 }

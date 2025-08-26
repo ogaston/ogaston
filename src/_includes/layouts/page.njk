@@ -10,13 +10,19 @@
     {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:image" content="{{ site.image }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Omar Gastón Chalas - Senior Software Engineer">
     
     <!-- Twitter Card Meta Tags for Pages -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@{{ site.twitter }}">
     <meta name="twitter:title" content="{{ title or site.name }}">
     {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+    <meta name="twitter:image" content="{{ site.image }}">
+    <meta name="twitter:image:alt" content="Omar Gastón Chalas - Senior Software Engineer">
     
     <!-- JSON-LD Structured Data for Blog Collection Page -->
     {% if page.url == '/blog/' %}
