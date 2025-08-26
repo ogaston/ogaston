@@ -7,7 +7,7 @@ tags: [Engineering]
 cover: https://images.ctfassets.net/szbztvipepx3/6Mkbzl9DAw7qdeaiWXv1fB/e750ccd7c622aab8df282eb02bf04307/level.jpg?w=786&h=442&q=50&fm=webp
 
 prevPost:
-  url: /blog/utils-do-dominican-republic/
+  url: /blog/what-is-utils-do-and-how-it-help-you-with-applications-for-dominicans/
   data:
     title: What is Utils-Do and How It Might Help You Build Applications for the Dominican Republic
 nextPost:

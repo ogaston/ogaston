@@ -6,6 +6,10 @@ date: 2019-09-20
 tags: [Engineering]
 cover: https://images.ctfassets.net/szbztvipepx3/LRtlzFPiutB8nDAjBNYap/6e793fa7b91657b688f2db780f54b9f5/Sin_t__tulo.png?w=786&h=442&q=50&fm=webp
 
+prevPost:
+  url: /blog/5-things-you-probably-dont-know-about-node-js/
+  data:
+    title: 5 Things You Probably Don't Know About Node.js
 nextPost:
   url: /blog/how-to-boost-your-career/
   data:

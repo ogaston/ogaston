@@ -7,11 +7,11 @@ tags: [Engineering,Career]
 cover: https://images.ctfassets.net/szbztvipepx3/7lbfbmQzfD9sRIZSej6UDn/40ced51abaef2e583bcc2c1b68d0bd92/beach-1246646_1920.jpg?w=786&h=589&q=50&fm=webp
 
 prevPost:
-  url: /blog/5-things-nodejs/
+  url: /blog/5-things-you-probably-dont-know-about-node-js/
   data:
     title: 5 Things You Probably Don't Know About Node.js
 nextPost:
-  url: /blog/utils-do-dominican-republic/
+  url: /blog/what-is-utils-do-and-how-it-help-you-with-applications-for-dominicans/
   data:
     title: What is Utils-Do and How It Might Help You Build Applications for the Dominican Republic
 
