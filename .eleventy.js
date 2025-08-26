@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
     // eleventyConfig.addPlugin(pluginRss);
 
     return {
-        dir: { input: "src", output: "dist", includes: "_includes", data: "_data" },
+        dir: { input: "src", output: "dist", includes: "_includes", data: "_data", exclude: ["assets"] },
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
         templateFormats: ["md", "njk"]

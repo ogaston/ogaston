@@ -90,6 +90,22 @@ title: Blog · Omar Gastón Chalas
 
     <!-- POSTS GRID -->
     <main class="mx-auto max-w-7xl px-6 pb-20">
+      <!-- EMPTY STATE -->
+      <div id="empty-state" class="hidden text-center py-16">
+        <div class="mx-auto max-w-md">
+          <h3 class="text-xl font-semibold text-slate-700 mb-2">No posts found</h3>
+          <p class="text-slate-500" id="empty-message">No blog posts match the selected category.</p>
+          <button id="clear-filters" class="mt-4 inline-flex items-center gap-2 rounded-xl text-secondary-500 px-4 py-2 text-sm font-semibold hover:opacity-90 transition">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6h18"/>
+              <path d="M19 6v14c0 1-1 2-2 2H7c-2 0-2-1-2-2V6"/>
+              <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+            </svg>
+            Clear filters
+          </button>
+        </div>
+      </div>
+      
       <div id="posts" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {% for post in collections.posts | reverse %}
         <article class="post card group overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-slate-100" 
@@ -144,7 +160,14 @@ title: Blog · Omar Gastón Chalas
       </div>
     </main>
 
-
+    <style>
+      .chip {
+        @apply inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-all hover:border-brand.light hover:text-brand.dark cursor-pointer;
+      }
+      .chip[aria-pressed="true"] {
+        @apply bg-secondary-500 text-white border-secondary-500;
+      }
+    </style>
 
     <script>
       // Blog filtering, sorting, and pagination
@@ -157,6 +180,10 @@ title: Blog · Omar Gastón Chalas
       const nextBtn = document.getElementById('next');
       const pageEl = document.getElementById('page');
       const pagesEl = document.getElementById('pages');
+      const emptyState = document.getElementById('empty-state');
+      const emptyMessage = document.getElementById('empty-message');
+      const clearFiltersBtn = document.getElementById('clear-filters');
+      const postsGrid = document.getElementById('posts');
 
       let activeTag = 'all';
       let currentPage = 1;
@@ -210,24 +237,45 @@ title: Blog · Omar Gastón Chalas
           nextBtn.classList.toggle('opacity-50', currentPage >= totalPages);
         }
 
-        // Show/hide posts based on pagination
-        const grid = document.getElementById('posts');
+        // Show/hide empty state and posts
         posts.forEach(post => post.classList.add('hidden'));
-
-        if (shouldShowPagination) {
-          const startIndex = (currentPage - 1) * postsPerPage;
-          const endIndex = startIndex + postsPerPage;
-          const postsToShow = filteredPosts.slice(startIndex, endIndex);
+        
+        if (filteredPosts.length === 0) {
+          // Show empty state
+          emptyState.classList.remove('hidden');
+          postsGrid.classList.add('hidden');
+          paginationEl.classList.add('hidden');
           
-          postsToShow.forEach(post => {
-            post.classList.remove('hidden');
-            grid.appendChild(post);
-          });
+          // Update empty message based on filters
+          if (q && activeTag !== 'all') {
+            emptyMessage.textContent = `No posts found for "${activeTag}" matching "${q}".`;
+          } else if (q) {
+            emptyMessage.textContent = `No posts found matching "${q}".`;
+          } else if (activeTag !== 'all') {
+            emptyMessage.textContent = `No blog posts found for "${activeTag}" category.`;
+          } else {
+            emptyMessage.textContent = 'No blog posts found.';
+          }
         } else {
-          filteredPosts.forEach(post => {
-            post.classList.remove('hidden');
-            grid.appendChild(post);
-          });
+          // Hide empty state and show posts
+          emptyState.classList.add('hidden');
+          postsGrid.classList.remove('hidden');
+          
+          if (shouldShowPagination) {
+            const startIndex = (currentPage - 1) * postsPerPage;
+            const endIndex = startIndex + postsPerPage;
+            const postsToShow = filteredPosts.slice(startIndex, endIndex);
+            
+            postsToShow.forEach(post => {
+              post.classList.remove('hidden');
+              postsGrid.appendChild(post);
+            });
+          } else {
+            filteredPosts.forEach(post => {
+              post.classList.remove('hidden');
+              postsGrid.appendChild(post);
+            });
+          }
         }
       }
 
@@ -274,6 +322,26 @@ title: Blog · Omar Gastón Chalas
           currentPage++;
           applyFilters();
         }
+      });
+
+      // Clear filters button
+      clearFiltersBtn.addEventListener('click', () => {
+        // Reset search
+        search.value = '';
+        
+        // Reset active tag to "all"
+        chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+        const allChip = chips.find(chip => chip.dataset.tag === 'all');
+        if (allChip) {
+          allChip.setAttribute('aria-pressed', 'true');
+        }
+        activeTag = 'all';
+        
+        // Reset page
+        currentPage = 1;
+        
+        // Apply filters
+        applyFilters();
       });
 
       // Initialize
