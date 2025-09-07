@@ -16,7 +16,6 @@ nextPost:
     title: How to Boost Your Career as a Software Developer/Architect
 
 toc:
-  - { id: intro, text: "Introduction" }
   - { id: a-new-start-is-born, text: "A New Start is Born" }
   - { id: i-can-do-it-better, text: "I Can Do It Better" }
   - { id: the-cost-of-a-flashy-website, text: "The Cost of a Flashy Website" }
@@ -30,13 +29,13 @@ I’ve been working in the software industry for about 8 years. Along the way, I
 
 I started by building my first version with **plain HTML, CSS, and JavaScript** because I wanted to prove my creativity and core web development skills. With some design background, I sketched a mockup first, then challenged myself to bring it to life without libraries or frameworks.  
 
-Launching that version was incredibly fulfilling — it gave me confidence in my ability to deliver.  
+[And yes, I did it](https://ogaston.github.io/ogaston/). Launching that version was incredibly fulfilling — it gave me confidence in my ability to deliver.  
 
 <h2 id="i-can-do-it-better">I Can Do It Better</h2>
 
 Later, as my experience grew, I felt ready to build something more advanced. Around that time, I learned React, got deeper into the community (which was at its peak), and discovered the **JAMstack wave**.  
 
-Excited by this new approach, I jumped into version 2 of my site. This time, I went all in: Gatsby, Contentful, Tailwind, and more. The result was impressive — **fast, smooth, feature-rich**, with a blog, search bar, and sleek design. It was my most complete project at the time, and I felt proud. But years passed...  
+Excited by this new approach, I jumped into version 2 of my site. This time, I went all in: Gatsby, Contentful, Tailwind, and more. [The result was impressive](https://ogaston.netlify.app/) — **fast, smooth, feature-rich**, with a blog, search bar, and sleek design. It was my most complete project at the time, and I felt proud. But years passed...  
 
 <h2 id="the-cost-of-a-flashy-website">The Cost of a Flashy Website</h2>
 
@@ -52,7 +51,7 @@ After processing the frustration (and laughing at myself), I asked: *Do I really
 
 All I needed was a simple site where people could know who I am and what I’m doing. So, instead of overloading it, I stripped it down.  
 
-For the third time, I rebuilt my personal website — but now with the opposite mindset. I avoided unnecessary complexity, chose a **simple static site generator**, and kept the project minimal. The result? No more dependency nightmares, and the site perfectly fits my needs.  
+For the third time, I rebuilt my personal website (the one that you're looking at right now 😉) — but now with the opposite mindset. I avoided unnecessary complexity, chose a **simple static site generator**, and kept the project minimal. The result? No more dependency nightmares, and the site perfectly fits my needs.  
 
 <h2 id="final-thoughts">Final Thoughts</h2> 
 
