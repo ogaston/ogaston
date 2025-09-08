@@ -35,7 +35,7 @@ I started by building my first version with **plain HTML, CSS, and JavaScript** 
 
 Later, as my experience grew, I felt ready to build something more advanced. Around that time, I learned React, got deeper into the community (which was at its peak), and discovered the **JAMstack wave**.  
 
-Excited by this new approach, I jumped into version 2 of my site. This time, I went all in: Gatsby, Contentful, Tailwind, and more. [The result was impressive](https://ogaston.netlify.app/) — **fast, smooth, feature-rich**, with a blog, search bar, and sleek design. It was my most complete project at the time, and I felt proud. But years passed...  
+Excited by this new approach, I jumped into version 2 of my site. This time, I went all in: Gatsby, Contentful, Tailwind, and more. [The result was impressive](https://62967c46790e6f00084cf7aa--ogaston.netlify.app/) — **fast, smooth, feature-rich**, with a blog, search bar, and sleek design. It was my most complete project at the time, and I felt proud. But years passed...  
 
 <h2 id="the-cost-of-a-flashy-website">The Cost of a Flashy Website</h2>
 
