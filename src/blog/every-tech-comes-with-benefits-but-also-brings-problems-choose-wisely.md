@@ -4,7 +4,7 @@ title: Every Tech Comes with Benefits but Also Brings Problems — Choose Wisely
 description: A short anecdote about how I suffered from taking an unnecessary decision a few years ago.
 date: 2025-07-09
 tags: [Career,Product]
-cover: https://media.licdn.com/dms/image/v2/D4E16AQFQ7wls_N0UTQ/profile-displaybackgroundimage-shrink_350_1400/B4EZfXNeUXHYAY-/0/1751662323402?e=1759968000&v=beta&t=SNBqvu7I6RjkSvByGt2-rBvgqSYd-xEygyzYGaLImso
+cover: https://www.ogaston.com/assets/img/blogs/trade-off.png
 
 prevPost:
   url: /blog/how-i-launched-a-simple-but-important-application-in-a-week-or-less/
