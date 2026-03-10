@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: Identity Fraud in the Age of Deepfakes: We Can No Longer Trust a Video
+title: Identity Fraud in the Age of Deepfakes, We Can No Longer Trust a Video
 description: Explore how deepfakes are created, the latest attacks on KYC systems, and the tools being developed to detect synthetic media.
 date: 2026-03-09
 tags: [Engineering, Security, Deepfakes, Cybersecurity]
