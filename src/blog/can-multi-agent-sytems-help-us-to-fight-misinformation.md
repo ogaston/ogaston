@@ -93,7 +93,7 @@ I needed to establish a way keep the ingestion, preprocessing, audit and exposit
 
 <p align="center">
   <img 
-    src="@src/assets/img/blogs/multi-source-news-verification-pipeline.png" 
+    src="/assets/img/blogs/multi-source-news-verification-pipeline.png" 
     alt="Multi-Source News Verification Pipeline"
     style="max-width: 100%; height: auto;"
   />
