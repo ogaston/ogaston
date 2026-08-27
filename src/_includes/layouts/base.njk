@@ -3,7 +3,7 @@
   <head>
     {% include 'partials/head.njk' %}
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
-    
+
     <!-- Open Graph Meta Tags for Non-Article Pages -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ title or site.name }}">
@@ -15,7 +15,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Omar Gastón Chalas - Cloud & AI Engineer">
-    
+
     <!-- Twitter Card Meta Tags for Non-Article Pages -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter }}">
@@ -24,7 +24,7 @@
     {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
     <meta name="twitter:image" content="{{ site.image }}">
     <meta name="twitter:image:alt" content="Omar Gastón Chalas - Cloud & AI Engineer">
-    
+
     <!-- JSON-LD Structured Data for Website/Organization -->
     <script type="application/ld+json">
     {
@@ -68,7 +68,7 @@
       ]
     }
     </script>
-    
+
     <!-- WebSite Schema -->
     <script type="application/ld+json">
     {
@@ -99,7 +99,7 @@
       {{ content | safe }}
     </main>
     {% include 'partials/footer.njk' %}
-    
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -113,31 +113,31 @@
 
         function toggleMenu() {
           if (!mobileMenu) return;
-          
+
           isMenuOpen = !isMenuOpen;
-          
+
           if (isMenuOpen) {
             // Open menu
             mobileMenu.classList.remove('-translate-x-full');
             mobileMenu.classList.add('translate-x-0');
-            
+
             // Animate hamburger to X
             line1.classList.add('rotate-45', 'translate-y-2');
             line2.classList.add('opacity-0');
             line3.classList.add('-rotate-45', '-translate-y-2');
-            
+
             // Prevent body scroll
             document.body.style.overflow = 'hidden';
           } else {
             // Close menu
             mobileMenu.classList.remove('translate-x-0');
             mobileMenu.classList.add('-translate-x-full');
-            
+
             // Reset hamburger
             line1.classList.remove('rotate-45', 'translate-y-2');
             line2.classList.remove('opacity-0');
             line3.classList.remove('-rotate-45', '-translate-y-2');
-            
+
             // Restore body scroll
             document.body.style.overflow = '';
           }
@@ -150,7 +150,7 @@
             toggleMenu();
           });
         }
-        
+
         // Close menu on close button click
         if (mobileMenuClose) {
           mobileMenuClose.addEventListener('click', function(e) {
@@ -158,7 +158,7 @@
             toggleMenu();
           });
         }
-        
+
         // Close menu when clicking on menu links
         menuLinks.forEach(link => {
           link.addEventListener('click', () => {
@@ -211,6 +211,9 @@
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
       </script>
       <script defer src="/_vercel/speed-insights/script.js"></script>
+
+      <!-- Self Hosted Analytics -->
+      <script defer src="https://analytics.ogaston.com/script.js" data-website-id="a4a58574-a548-4e0b-b821-772e83577330"></script>
     {% endif %}
   </body>
 </html>
